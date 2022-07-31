@@ -884,11 +884,12 @@ input::-webkit-search-results-decoration {
     margin-right: 12px;
     width: 12px;
     height: 12px;
-    border: 1px solid var(--color14);
+    border: var(--border) var(--color14);
     background-position: top 2.7px left 3px;
     background-repeat: no-repeat;
     background-size: 4px;
     transition: border-color .2s ease-in-out;
+    cursor: pointer;
 }
 
 .gallery__input-checkbox:checked+label::before {
@@ -1873,7 +1874,7 @@ input::-webkit-search-results-decoration {
   
 .ymaps-2-1-79-copyright__wrap,
 .ymaps-2-1-79-map-copyrights-promo {
-    display: none ;
+    display: none;
 }
   
 .request__form {
