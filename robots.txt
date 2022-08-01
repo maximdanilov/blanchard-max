@@ -1,0 +1,20 @@
+User-agent: Yandex
+Disallow: /admin
+Disallow: /img
+Host: http://cy18955.tmweb.ru/
+
+User-agent: Googlebot
+Disallow: /admin
+Disallow: /img
+
+User-agent: *
+Crawl-delay: 30
+Disallow: /admin
+Disallow: /img
+
+
+User-agent: *
+Disallow: /cgi-bin
+Disallow: /webalizer
+
+Sitemap: https://cy18955.tmweb.ru/sitemap.xml
