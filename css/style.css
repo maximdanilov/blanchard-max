@@ -375,6 +375,7 @@ input::-webkit-search-results-decoration {
 }
 
 .header__btn-tab {
+    font-family: 'Open Sans', sans-serif;
     padding: 6px 28px 6px 6px;
     color: var(--color14);
     background-image: url('../img/header-arrow.svg');
