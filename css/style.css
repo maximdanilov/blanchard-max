@@ -38,20 +38,18 @@ html {
 
 @font-face {
 	font-family: 'Open Sans';
-	src: url('/fonts/OpenSans-Bold.eot');
-	src: local('Open Sans Bold'), local('OpenSans-Bold'),
-        url('/fonts/OpenSansBold.woff2') format('woff2'),
-        url('/fonts/OpenSansBold.woff') format('woff');
+	src: /*local('Open Sans Bold'), local('OpenSans-Bold')*/,
+        url('../fonts/OpenSansBold.woff2') format('woff2'),
+        url('../fonts/OpenSansBold.woff') format('woff');
 	font-weight: 600;
 	font-style: normal;
 }
 
 @font-face {
 	font-family: 'Open Sans';
-	/*src: url('/fonts/OpenSans-Regular.eot');*/
-	src: local('Open Sans Regular'), local('OpenSans-Regular'),
-        url('/fonts/OpenSansRegular.woff2') format('woff2'),
-        url('/fonts/OpenSansRegular.woff') format('woff');
+	src: /*local('Open Sans Regular'), local('OpenSans-Regular'),*/
+        url('../fonts/OpenSansRegular.woff2') format('woff2'),
+        url('../fonts/OpenSansRegular.woff') format('woff');
 	font-weight:400;
 	font-style: normal;
 }
