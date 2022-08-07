@@ -1879,26 +1879,26 @@ input::-webkit-search-results-decoration {
     display: none;
 }
   
-.request__form {
+.contacts__request-form {
     gap: 20px;
     padding: 20px 20px;
     text-items: center;   
 }
 
-.request__btn {
+.contacts__btn-request {
     padding: 5px 15px;
     border: 2px solid var(--color7);
     border-radius: 90px;
     color: var(--color7);
 }
-.request_btn:focus-visible {
+.contacts__btn-request:focus-visible {
     outline: none;
 }
-.request__btn:hover {
+.contacts__btn-request:hover {
     color: var(--color14);
     background-color: var(--color7);
 }
-.request__btn:active {
+.contacts__btn-request:active {
     box-shadow: inset 0 0 0 3px var(--color5);
     border: none;
     color: var(--color14);
