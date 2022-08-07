@@ -85,10 +85,10 @@
   .header__nav {
     display: none;
   }
-  .header__button--visible {
+  .header__button-visible {
     display: none;
   }
-  .header__search-mobile--open {
+  .header__search-mobile-open {
     display: block;
   }
   .header__bottom {
@@ -393,7 +393,7 @@
     margin-bottom: 31px;
     width: 99%;
   }
-  .projects__descr-link--addition {
+  .projects__descr-link-addition {
     display: none;
   }
   .projects__second-title {
@@ -462,12 +462,12 @@
   .header__menu-mobile {
     height: 100vh;
   }
-  .header__burger--close {
+  .header__burger-close {
     margin-bottom: 16px;
     width: 15px;
     height: 15px;
   }
-  .header__burger--close  svg{
+  .header__burger-close  svg{
     width: 100%;
     height: 100%;
   }
@@ -496,14 +496,14 @@
     padding: 40px 64px 19px 57px;
     background-color: rgba(0, 0, 0, 0.9);
   }
-  .header__search-btn--size svg {
+  .header__search-btn-size svg {
     width: 100%;
     height: 100%;
   }
 }
 
 @media (max-width: 687px) {
-  .header__search-btn--size {
+  .header__search-btn-size {
     width: 16px;
     height: 16px;
   } 
@@ -513,7 +513,7 @@
   .header__form-btn {
     margin-right: 3px;
   }
-  .header__search-mobile--close {
+  .header__search-mobile-close {
     position: absolute;
     top: 15px;
     right: 15px;
@@ -714,7 +714,7 @@
     font-size: 16px;
     line-height: 32px;
   }
-  .projects__descr-link--addition {
+  .projects__descr-link-addition {
     display: inline;
   }
   .projects__second-title {
@@ -767,7 +767,7 @@
   .contacts__input-wrap {
     margin-bottom: 20px;
   }
-  .contacts__btn--addition {
+  .contacts__btn-addition {
     display: none;
   }
   .contacts__btn {
