@@ -1,37 +1,29 @@
 document.addEventListener("DOMContentLoaded", function () {
     // header
-
     // burger
 
-    const openBurgerMenuHandler = () => {
-        document.querySelector('#mobile-menu').classList.add('is-active-burger');
-        document.querySelector('html').style.overflow = 'hidden';
-    }
+    let burger = document.querySelector('.header__burger');
+    let menu = document.querySelector('.header__nav');
+    let menuLinks = document.querySelectorAll('.close-link');
+    let topHeader = document.querySelector('.header__top');
 
-    const closeBurgerHandler = () => {
-        document.querySelector('#mobile-menu').classList.remove('is-active-burger');
-        document.querySelector('html').style.overflow = 'unset';
-    };
+    burger.addEventListener('click', function (){
+      document.body.classList.toggle('stop-scroll');
+      burger.classList.toggle('header__burger--active');
+      burger.setAttribute("aria-expanded", "true");
+      menu.classList.toggle('nav--active');
+      topHeader.classList.toggle('header__top--active');
+    })
 
-    document.querySelector('#burger').addEventListener('click', (e) => {
-        openBurgerMenuHandler();
-    });
-
-    document.querySelector('#burger--close').addEventListener('click', () => {
-        closeBurgerHandler();
-    });
-
-    document.querySelectorAll('.header__link-mobile').forEach((link) => {
-        link.addEventListener('click', () => {
-            closeBurgerHandler();
-        });
-    });
-
-    document.querySelectorAll('.header__link-mobile').forEach((link) => {
-        link.addEventListener('click', () => {
-            document.querySelector('#mobile-menu').classList.remove('is-active-burger')
-        });
-    });
+    menuLinks.forEach(function (el) {
+      el.addEventListener('click', function () {
+        document.body.classList.remove('stop-scroll');
+        burger.classList.remove('header__burger--active');
+        burger.setAttribute("aria-expanded", "false");
+        menu.classList.remove('nav--active');
+        topHeader.classList.remove('header__top--active');
+      })
+    })
 
     // search
 
@@ -55,13 +47,13 @@ document.addEventListener("DOMContentLoaded", function () {
             let dropdown = this.parentElement.querySelector(".header__tab-dropdown");
 
             document.querySelectorAll(".header__btn-tab").forEach(el => {
-                if (el != btn) {
+                if (el !== btn) {
                     el.classList.remove("active-btn");
                 }
             });
 
             document.querySelectorAll(".header__tab-dropdown").forEach(el => {
-                if (el != dropdown) {
+                if (el !== dropdown) {
                     el.classList.remove("active-dropdown");
                 }
             })
@@ -219,7 +211,8 @@ document.addEventListener("DOMContentLoaded", function () {
                 slidesPerGroup: 3,
             }
         },
-    });
+    })
+
     // map
     ymaps.ready(init);
     function init() {
@@ -253,8 +246,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // contacts
     //form
-    var selector = document.querySelector("input[type='tel']");
-    var im = new Inputmask("+7 (999) 999-99-99");
+    let selector = document.querySelector("input[type='tel']");
+    let im = new Inputmask("+7 (999) 999-99-99");
     im.mask(selector);
 
     new JustValidate('.contacts__form', {
@@ -270,11 +263,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     const phone = selector.inputmask.unmaskedvalue()
                     return Number(phone) && phone.length === 10
                 }
-            },
-            mail: {
-                required: true,
-                email: true
-            },
+            }
         },
         messages: {
             name: {
@@ -285,6 +274,25 @@ document.addEventListener("DOMContentLoaded", function () {
                 required: "Укажите ваш телефон",
                 function: "Недопустимый формат",
             },
+        }
+    });
+    new JustValidate('.contacts__request-form', {
+        rules: {
+            name: {
+                required: true,
+                minLength: 2,
+                maxLength: 30
+            },
+            mail: {
+                required: true,
+                email: true
+            }
+        },
+        messages: {
+            name: {
+                required: "Как вас зовут?",
+                minLength: "Недопустимый формат",
+            },
             mail: {
                 required: "Укажите ваш email",
                 function: "Недопустимый формат",
@@ -293,8 +301,9 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
+
 $(".modal").dialog({
-    autoOpen: false
+    autoOpen: false,
 });
 
 $(document).ready(function(){
@@ -314,7 +323,7 @@ $(document).ready(function(){
 $(document).ready(function() {
 
 	//E-mail Ajax Send
-	$("form").submit(function() { //Change
+	$(".contacts__request-form").submit(function() { //Change
 		var th = $(this);
 		$.ajax({
 			type: "POST",
