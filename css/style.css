@@ -1910,7 +1910,6 @@ input::-webkit-search-results-decoration {
 .contacts__request-form {
     gap: 20px;
     padding: 20px 20px;
-    text-items: center;
 }
 
 .contacts__btn-request {
