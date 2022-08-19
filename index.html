@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="libs/choices.min.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <link rel="stylesheet" href="https://unpkg.com/simplebar@latest/dist/simplebar.css"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css"/>
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css"/> -->
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/media.css">
     <link rel="shortcut icon" href="img/favicon.svg" type="image/x-icon">
@@ -93,7 +93,7 @@
                 </button>
                 <div class="header__tab-dropdown" aria-hidden="true">
                   <div class="header__tab-dropdown-content" data-simplebar data-simplebar-scrollbar-max-size="28">
-                    <ul class="header__tab-list list-reset"> 
+                    <ul class="header__tab-list list-reset">
                       <li class="header__tab-item header__tab-1-1">
                         <a href="#" class="header__tab-link" aria-label="Тинторетто">Тинторетто</a>
                       </li>
@@ -267,7 +267,7 @@
                       <option>Скульптура</option>
                       <option>Рисунок</option>
                   </select>
-              </div>    
+              </div>
               <div class="gallery__checkboxes flex">
                   <input class="gallery__input-checkbox" type="checkbox" id="century19">
                   <label class="gallery__label-checkbox" for="century19">XIX век</label>
@@ -280,70 +280,63 @@
           <div class="gallery__swiper-container flex">
               <div class="gallery__swiper-wrapper swiper-wrapper">
                   <div class="gallery__swiper-slide swiper-slide">
-                      <p><a class="gallery__swiper-search" href="#ex1" rel="modal:open">
-                          <picture>
-                              <source media="(max-width: 687px)" srcset="img/gallery-slide-320px-1.png">
-                              <source media="(max-width: 1008px)" srcset="img/gallery-slide-768px-1.png">
-                              <source media="(max-width: 1420px)" srcset="img/gallery-slide-1024px-1.png">
-                              <img class="gallery__slide-img" src="img/gallery-slide-1920px-1.png" alt="painting 1">
-                          </picture>
-                      </a></p>
-                    <div class="gallery__slide-wrap"></div>
-                  </div>
-                  <div class="gallery__swiper-slide swiper-slide">
-                      <p><a href="#ex2" rel="modal:open">           
-                          <picture>
-                              <source media="(max-width: 687px)" srcset="img/gallery-slide-320px-2.png">
-                              <source media="(max-width: 1008px)" srcset="img/gallery-slide-768px-2.png">
-                              <source media="(max-width: 1420px)" srcset="img/gallery-slide-1024px-2.png">
-                              <img class="gallery__slide-img" src="img/gallery-slide-1920px-2.png" alt="painting 2">
-                          </picture>
-                      </a></p>    
-                      <div class="gallery__slide-wrap"></div>
-                  </div>
-                  <div class="gallery__swiper-slide swiper-slide">
-                      <p><a href="#ex3" rel="modal:open">     
-                          <picture>
-                              <source media="(max-width: 687px)" srcset="img/gallery-slide-320px-3.png">
-                              <source media="(max-width: 1008px)" srcset="img/gallery-slide-768px-3.png">
-                              <source media="(max-width: 1420px)" srcset="img/gallery-slide-1024px-3.png">
-                              <img class="gallery__slide-img" src="img/gallery-slide-1920px-3.png" alt="painting 3">
-                          </picture>
-                      </a></p>      
-                      <div class="gallery__slide-wrap"></div>
-                  </div>
-                  <div class="gallery__swiper-slide swiper-slide">
-                      <p><a href="#ex4" rel="modal:open">
-                          <picture>
-                              <source media="(max-width: 687px)" srcset="img/gallery-slide-320px-4.png">
-                              <source media="(max-width: 1008px)" srcset="img/gallery-slide-768px-4.png">
-                              <source media="(max-width: 1420px)" srcset="img/gallery-slide-1024px-4.png">
-                              <img class="gallery__slide-img" src="img/gallery-slide-1920px-4.png" alt="painting 4">
-                          </picture>
-                      </a></p>
-                      <div class="gallery__slide-wrap"></div>
-                  </div>
-                  <div class="gallery__swiper-slide swiper-slide">
-                      <p><a href="#ex5" rel="modal:open">
-                          <picture>
-                              <source media="(max-width: 687px)" srcset="img/gallery-slide-320px-5.png">
-                              <source media="(max-width: 1008px)" srcset="img/gallery-slide-768px-5.png">
-                              <source media="(max-width: 1420px)" srcset="img/gallery-slide-1024px-5.png">
-                              <img class="gallery__slide-img" src="img/gallery-slide-1920px-5.png" alt="painting 5">
-                          </picture>
-                      </a></p>
-                      <div class="gallery__slide-wrap"></div>
-                  </div>
-                  <div class="gallery__swiper-slide swiper-slide">
-                      <p><a href="#ex6" rel="modal:open">
-                          <picture>
-                              <source media="(max-width: 1008px)" srcset="img/gallery-slide-768px-6.png">
-                              <source media="(max-width: 1420px)" srcset="img/gallery-slide-1024px-6.png">
-                              <img class="gallery__slide-img" src="img/gallery-slide-1920px-6.png" alt="painting 6">
-                          </picture>
-                          </a></p>
-                         <div class="gallery__slide-wrap">
+                      <div class="gallery__slide-wrap" data-path="one">
+                        <picture>
+                          <source media="(max-width: 687px)" srcset="img/gallery-slide-320px-1.png">
+                          <source media="(max-width: 1008px)" srcset="img/gallery-slide-768px-1.png">
+                          <source media="(max-width: 1420px)" srcset="img/gallery-slide-1024px-1.png">
+                          <img class="gallery__slide-img" src="img/gallery-slide-1920px-1.png" alt="painting 1">
+                        </picture>
                       </div>
+                  </div>
+                  <div class="gallery__swiper-slide swiper-slide">
+                    <div class="gallery__slide-wrap" data-path="two">
+                      <picture>
+                        <source media="(max-width: 687px)" srcset="img/gallery-slide-320px-2.png">
+                        <source media="(max-width: 1008px)" srcset="img/gallery-slide-768px-2.png">
+                        <source media="(max-width: 1420px)" srcset="img/gallery-slide-1024px-2.png">
+                        <img class="gallery__slide-img" src="img/gallery-slide-1920px-2.png" alt="painting 2">
+                      </picture>
+                    </div>
+                  </div>
+                  <div class="gallery__swiper-slide swiper-slide">
+                    <div class="gallery__slide-wrap" data-path="three">
+                      <picture>
+                          <source media="(max-width: 687px)" srcset="img/gallery-slide-320px-3.png">
+                          <source media="(max-width: 1008px)" srcset="img/gallery-slide-768px-3.png">
+                          <source media="(max-width: 1420px)" srcset="img/gallery-slide-1024px-3.png">
+                          <img class="gallery__slide-img" src="img/gallery-slide-1920px-3.png" alt="painting 3">
+                      </picture>
+                    </div>
+                  </div>
+                  <div class="gallery__swiper-slide swiper-slide">
+                    <div class="gallery__slide-wrap" data-path="four">
+                      <picture>
+                          <source media="(max-width: 687px)" srcset="img/gallery-slide-320px-4.png">
+                          <source media="(max-width: 1008px)" srcset="img/gallery-slide-768px-4.png">
+                          <source media="(max-width: 1420px)" srcset="img/gallery-slide-1024px-4.png">
+                          <img class="gallery__slide-img" src="img/gallery-slide-1920px-4.png" alt="painting 4">
+                      </picture>
+                    </div>
+                  </div>
+                  <div class="gallery__swiper-slide swiper-slide">
+                    <div class="gallery__slide-wrap" data-path="five">
+                      <picture>
+                          <source media="(max-width: 687px)" srcset="img/gallery-slide-320px-5.png">
+                          <source media="(max-width: 1008px)" srcset="img/gallery-slide-768px-5.png">
+                          <source media="(max-width: 1420px)" srcset="img/gallery-slide-1024px-5.png">
+                          <img class="gallery__slide-img" src="img/gallery-slide-1920px-5.png" alt="painting 5">
+                      </picture>
+                    </div>
+                  </div>
+                  <div class="gallery__swiper-slide swiper-slide">
+                    <div class="gallery__slide-wrap" data-path="six">
+                      <picture>
+                          <source media="(max-width: 1008px)" srcset="img/gallery-slide-768px-6.png">
+                          <source media="(max-width: 1420px)" srcset="img/gallery-slide-1024px-6.png">
+                          <img class="gallery__slide-img" src="img/gallery-slide-1920px-6.png" alt="painting 6">
+                      </picture>
+                    </div>
                   </div>
               </div>
               <div class="gallery__btn-wrap flex">
@@ -364,61 +357,137 @@
                   </button>
               </div>
           </div>
-          <div id="ex1" class="modal">
-              <img class="modal__img" src="img/gallery-slide-1024px-1.png" alt="">
-              <div class="modal__block">
-                <h3 class="modal__title">Казимир Малевич</h3>
-                <span class="modal__name">&laquo;Торс (Фигура с розовым лицом)&raquo;</span>
-                <span class="modal__date">1928&ndash;1929</span>
-                <p class="modal__text">Эти странные безликие &laquo;полуобразы&raquo; (так называл подобные работы сам художник), зашифрованные в&nbsp;женских фигурах и&nbsp;торсах, существуют по&nbsp;мысли К. Малевича, в&nbsp;параллельном мире, в&nbsp;пределах вымышленного художником Космоса, в&nbsp;пространстве без времени. Произведение вызывает ассоциации и&nbsp;с&nbsp;пластикой архаической скульптуры, и&nbsp;с&nbsp;деревянной игрушкой, и&nbsp;с&nbsp;модернистским манекеном.</p>
-              </div>
+          <div class="modal">
+            <ul class="modal__list list-reset">
+              <li class="modal__item" data-gallery="one">
+                <article class="modal__item-painter">
+                  <div class="modal__img">
+                    <picture>
+                      <source media="(max-width: 640px)" srcset="img/modal-1-320.jpg">
+                      <source media="(max-width: 992px)" srcset="img/modal-1-768.jpg">
+                      <source media="(max-width: 1440px)" srcset="img/modal-1-1024.jpg">
+                      <img class="modal__painter" src="img/modal-1-1920.jpg" alt="">
+                    </picture>
+                  </div>
+                  <div class="modal__block">
+                    <button class="modal__btn-close btn-reset" type="button" aria-label="Закрыть окно"></button>
+                    <h3 class="modal__title">Казимир Малевич</h3>
+                    <h4 class="modal__title-name modal__title">&laquo;Торс (Фигура с&nbsp;розовым лицом) &#8470;&nbsp;2&raquo;</h4>
+                    <span class="modal__date">1928&ndash;1929</span>
+                    <p class="modal__text section-descr">
+                      Эти странные безликие &laquo;полуобразы&raquo; (так называл подобные работы сам художник), зашифрованные в&nbsp;женских фигурах и&nbsp;торсах, существуют по&nbsp;мысли К. Малевича, в&nbsp;параллельном мире, в&nbsp;пределах вымышленного художником Космоса, в&nbsp;пространстве без времени. Произведение вызывает ассоциации и&nbsp;с&nbsp;пластикой архаической скульптуры, и&nbsp;с&nbsp;деревянной игрушкой, и&nbsp;с&nbsp;модернистским манекеном.
+                    </p>
+                  </div>
+                </article>
+              </li>
+              <li class="modal__item" data-gallery="two">
+                <article class="modal__item-painter">
+                  <div class="modal__img">
+                    <picture>
+                      <source media="(max-width: 640px)" srcset="img/modal-2-320.jpg">
+                      <source media="(max-width: 992px)" srcset="img/modal-2-768.jpg">
+                      <source media="(max-width: 1440px)" srcset="img/modal-2-1024.jpg">
+                      <img class="modal__painter" src="img/modal-2-1920.jpg" alt="">
+                    </picture>
+                  </div>
+                  <div class="modal__block">
+                    <button class="modal__btn-close btn-reset" type="button" aria-label="Закрыть окно"></button>
+                    <h3 class="modal__title">Казимир Малевич</h3>
+                    <h4 class="modal__title-name modal__title">&laquo;Женщина с&nbsp;граблями&raquo;</h4>
+                    <span class="modal__date">1931&ndash;1932</span>
+                    <p class="modal__text section-descr">
+                      Картина из&nbsp;второй серии крестьянского цикла работ Казимира Малевича. Художник принялся за&nbsp;её&nbsp;создание в&nbsp;1930-1931&nbsp;годах, после того, как первый цикл был утерян после Берлинской и&nbsp;Варшавской выставок в&nbsp;1927&nbsp;году.
+                    </p>
+                  </div>
+                </article>
+              </li>
+              <li class="modal__item" data-gallery="three">
+                <article class="modal__item-painter">
+                  <div class="modal__img">
+                    <picture>
+                      <source media="(max-width: 640px)" srcset="img/modal-3-320.jpg">
+                      <source media="(max-width: 992px)" srcset="img/modal-3-768.jpg">
+                      <source media="(max-width: 1440px)" srcset="img/modal-3-1024.jpg">
+                      <img class="modal__painter" src="img/modal-3-1920.jpg" alt="">
+                    </picture>
+                  </div>
+                  <div class="modal__block">
+                    <button class="modal__btn-close btn-reset" type="button" aria-label="Закрыть окно"></button>
+                    <h3 class="modal__title">Казимир Малевич</h3>
+                    <h4 class="modal__title-name modal__title">&laquo;Уборка ржи&raquo;</h4>
+                    <span class="modal__date">1912</span>
+                    <p class="modal__text section-descr">
+                      &laquo;Уборка ржи&raquo;&nbsp;&mdash; это образчик российского кубофутуризма, взявшего начало у&nbsp;французских мастеров. Работа относится к&nbsp;крестьянской серии картин, запечатлевшей рутинный уклад сельской жизни. В&nbsp;этот период у&nbsp;Малевича произошел перелом в&nbsp;направлении художественного стиля.
+                    </p>
+                  </div>
+                </article>
+              </li>
+              <li class="modal__item" data-gallery="four">
+                <article class="modal__item-painter">
+                  <div class="modal__img">
+                    <picture>
+                      <source media="(max-width: 640px)" srcset="img/modal-4-320.jpg">
+                      <source media="(max-width: 992px)" srcset="img/modal-4-768.jpg">
+                      <source media="(max-width: 1440px)" srcset="img/modal-4-1024.jpg">
+                      <img class="modal__painter" src="img/modal-4-1920.jpg" alt="">
+                    </picture>
+                  </div>
+                  <div class="modal__block">
+                    <button class="modal__btn-close btn-reset" type="button" aria-label="Закрыть окно"></button>
+                    <h3 class="modal__title">Иван Клюн</h3>
+                    <h4 class="modal__title-name modal__title">&laquo;Супрематизм&raquo;</h4>
+                    <span class="modal__date">1915</span>
+                    <p class="modal__text section-descr">
+                      На данный момент описание картины отсутсвует, следите за обновлениями
+                    </p>
+                  </div>
+                </article>
+              </li>
+              <li class="modal__item" data-gallery="five">
+                <article class="modal__item-painter">
+                  <div class="modal__img">
+                    <picture>
+                      <source media="(max-width: 640px)" srcset="img/modal-5-320.jpg">
+                      <source media="(max-width: 992px)" srcset="img/modal-5-768.jpg">
+                      <source media="(max-width: 1440px)" srcset="img/modal-5-1024.jpg">
+                      <img class="modal__painter" src="img/modal-5-1920.jpg" alt="">
+                    </picture>
+                  </div>
+                  <div class="modal__block">
+                    <button class="modal__btn-close btn-reset" type="button" aria-label="Закрыть окно"></button>
+                    <h3 class="modal__title">Казимир Малевич</h3>
+                    <h4 class="modal__title-name modal__title">&laquo;Женщина с&nbsp;ведрами&raquo;</h4>
+                    <span class="modal__date">1911&ndash;1912</span>
+                    <p class="modal__text section-descr">
+                      Стиль, известный как русский авангард характерен для искусства Российской Империи, а&nbsp;затем и&nbsp;Советского Союза в&nbsp;период с&nbsp;1890 по&nbsp;1930&nbsp;год. В&nbsp;это время внутри авангардного движения создавалось множество подстилей, имеющих свои уникальные отличительные черты. Одним из&nbsp;таких подстилей и&nbsp;стал супрематизм&nbsp;&mdash; движение, основанное Казимиром Малевичем и&nbsp;характерное для всей его живописи, в&nbsp;том числе и&nbsp;для &laquo;Женщины с&nbsp;ведрами&raquo;.
+                    </p>
+                  </div>
+                </article>
+              </li>
+              <li class="modal__item" data-gallery="six">
+                <article class="modal__item-painter">
+                  <div class="modal__img">
+                    <picture>
+                      <source media="(max-width: 640px)" srcset="img/modal-6-320.jpg">
+                      <source media="(max-width: 992px)" srcset="img/modal-6-768.jpg">
+                      <source media="(max-width: 1440px)" srcset="img/modal-6-1024.jpg">
+                      <img class="modal__painter" src="img/modal-6-1920.jpg" alt="">
+                    </picture>
+                  </div>
+                  <div class="modal__block">
+                    <button class="modal__btn-close btn-reset" type="button" aria-label="Закрыть окно"></button>
+                    <h3 class="modal__title">Казимир Малевич</h3>
+                    <h4 class="modal__title-name modal__title">&laquo;Суперматизм&raquo;</h4>
+                    <span class="modal__date">1915&ndash;1916</span>
+                    <p class="modal__text section-descr">
+                      На данный момент описание картины отсутсвует, следите за обновлениями
+                    </p>
+                  </div>
+                </article>
+              </li>
+            </ul>
           </div>
-          <div id="ex2" class="modal">
-              <img class="modal__img" src="img/gallery-slide-1920px-2.png" alt="">
-              <div class="modal__block">
-                <h3 class="modal__title">Казимир Малевич</h3>
-                <span class="modal__name">&laquo;Женщина с&nbsp;граблями&raquo;</span>
-                <span class="modal__date">1931&ndash;1932</span>
-                <p class="modal__text">Картина из&nbsp;второй серии крестьянского цикла работ Казимира Малевича. Художник принялся за&nbsp;её&nbsp;создание в&nbsp;1930&ndash;1931&nbsp;годах, после того, как первый цикл был утерян после Берлинской и&nbsp;Варшавской выставок в&nbsp;1927&nbsp;году.</p>
-              </div>
-          </div>
-          <div id="ex3" class="modal">
-              <img class="modal__img" src="img/gallery-slide-1920px-3.png" alt="">
-              <div class="modal__block">
-                <h3 class="modal__title">Казимир Малевич</h3>
-                <span class="modal__name">&laquo;Уборка ржи&raquo;</span>
-                <span class="modal__date">1912</span>
-                <p class="modal__text">&laquo;Уборка ржи&raquo;&nbsp;&mdash; это образчик российского кубофутуризма, взявшего начало у&nbsp;французских мастеров. Работа относится к&nbsp;крестьянской серии картин, запечатлевшей рутинный уклад сельской жизни. В&nbsp;этот период у&nbsp;Малевича произошел перелом в&nbsp;направлении художественного стиля.</p>
-              </div>
-          </div>
-          <div id="ex4" class="modal">
-              <img class="modal__img" src="img/gallery-slide-1920px-4.png" alt="">
-              <div class="modal__block">
-                  <h3 class="modal__title">Иван Клюн</h3>
-                  <span class="modal__name">&laquo;Супрематизм&raquo;</span>
-                  <span class="modal__date">1915</span>
-                  <p class="modal__text">На данный момент описание картины отсутсвует, следите за обновлениями</p>
-              </div>
-          </div>
-          <div id="ex5" class="modal">
-              <img class="modal__img" src="img/gallery-slide-320px-5.png" alt="">
-              <div class="modal__block">
-                  <h3 class="modal__title">Казимир Малевич</h3>
-                  <span class="modal__name">&laquo;Женщина с&nbsp;ведрами&raquo;</span>
-                  <span class="modal__date">1911&ndash;1912</span>
-                  <p class="modal__text">Стиль, известный как русский авангард характерен для искусства Российской Империи, а&nbsp;затем и&nbsp;Советского Союза в&nbsp;период с&nbsp;1890 по&nbsp;1930&nbsp;год. В&nbsp;это время внутри авангардного движения создавалось множество подстилей, имеющих свои уникальные отличительные черты. Одним из&nbsp;таких подстилей и&nbsp;стал супрематизм&nbsp;&mdash; движение, основанное Казимиром Малевичем и&nbsp;характерное для всей его живописи, в&nbsp;том числе и&nbsp;для &laquo;Женщины с&nbsp;ведрами&raquo;.</p>
-              </div>
-          </div>
-          <div id="ex6" class="modal">
-              <img class="modal__img" src="img/gallery-slide-1920px-5.png" alt="">
-              <div class="modal__block">
-                  <h3 class="modal__title">Казимир Малевич</h3>
-                  <span class="modal__name">&laquo;Суперматизм&raquo;</span>
-                  <span class="modal__date">1915&ndash;1916</span>
-                  <p class="modal__text">На данный момент описание картины отсутсвует, следите за обновлениями</p>
-              </div>
-          </div>
-      </div>
+        </div>
     </section>
   
     <section id="catalog" class="catalog">
