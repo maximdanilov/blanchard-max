@@ -128,7 +128,7 @@ body {
 }
 
 .section-title {
-  margin: 0;
+  margin: 4px 0;
   padding: 0;
   font-weight: var(--weight4);
   font-size: var(--size48);
@@ -409,7 +409,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 22px 0;
+  padding: 18px 0;
 }
 
 .header__bottom-menu-list {
@@ -703,11 +703,11 @@ body {
   flex-direction: column;
   align-items: flex-start;
   width: 35%;
-  margin-top: 18px;
+  margin-top: 35px;
 }
 
 .hero__title {
-  margin: 0 0 18px;
+  margin: 0;
   padding: 0;
   font-weight: var(--weight7);
   font-size: 72px;
@@ -725,7 +725,7 @@ body {
 }
 
 .hero__link {
-  padding: 23px 35px;
+  padding: 20px 35px;
   font-weight: var(--weight7);
   font-size: var(--size18);
   border-radius: 100px;
@@ -766,7 +766,7 @@ body {
 }
 
 .about {
-  /*padding: 80px 0 70px;*/
+  padding: 0 0 30px;
   background-color: var(--color14);
 }
 
@@ -787,14 +787,14 @@ body {
   background-position: center;
 }
 
-.gallery__title {
-  margin: 80px 0 22px;
-  color: var(--color14);
+.gallery__container {
+  margin-top: 40px;
+  padding-bottom: 70px;
 }
 
-.gallery__container {
-  margin-top: 50px;
-  padding-bottom: 50px;
+.gallery__title {
+  margin: 70px 0 10px;
+  color: var(--color14);
 }
 
 .gallery__content-left {
@@ -818,7 +818,8 @@ body {
 }
 
 .choices:last-child {
-  margin-bottom: 185px;
+  margin-bottom: 180px;
+  margin-top: 10px;
 }
 
 .choices:focus:not(:hover):not(:active) {
@@ -834,7 +835,7 @@ body {
   position: relative;
   width: 100%;
   min-height: 40px;
-  padding: 10px 8px;
+  padding: 0 15px;
   font-size: 16px;
   border: none;
   background: inherit;
@@ -963,7 +964,7 @@ body {
 }
 
 .gallery__label-checkbox:not(:last-child) {
-  margin-bottom: 13px;
+  margin-bottom: 0;
 }
 
 .gallery__input-checkbox:focus-visible+.gallery__label-checkbox,
@@ -1261,8 +1262,13 @@ body {
   padding-bottom: 78px;
 }
 
+.catalog__title {
+  padding-top: 10px;
+}
+
 .catalog__descr {
-  margin-bottom: 38px;
+  margin-top: 12px;
+  margin-bottom: 45px;
   max-width: 1080px;
 }
 
@@ -1295,6 +1301,7 @@ body {
 }
 
 .catalog__content-descr {
+  margin: 0;
   color: var(--color2);
 }
 
@@ -1317,7 +1324,7 @@ body {
 .catalog__item {
   width: 100%;
   height: 100%;
-  margin-top: -1px;
+  margin-top: -5px;
   transition: all 0.2s ease-in-out;
   cursor: pointer;
 }
@@ -1336,7 +1343,7 @@ body {
   position: relative;
   width: 100%;
   padding-top: 20px;
-  padding-bottom: 20px;
+  padding-bottom: 18px;
   justify-content: space-between;
   align-items: center;
 }
@@ -1344,6 +1351,7 @@ body {
 .catalog__item-title {
   font-weight: var(--weight6);
   font-size: var(--size24);
+  line-height: var(--size32);
   transition: all .2s ease-in-out;
 }
 
@@ -1492,6 +1500,7 @@ body {
 
 .events__container {
   position: relative;
+  margin-top: 8px;
 }
 
 .events__title {
@@ -1600,7 +1609,7 @@ body {
 }
 
 .events__card-bottom {
-  padding: 15px 50px 39px 50px;
+  padding: 10px 50px 39px 50px;
   margin-bottom: auto;
   min-height: 345px;
   flex-direction: column;
@@ -1611,22 +1620,26 @@ body {
 }
 
 .events__card-info {
-  margin-bottom: 11px;
+  margin-bottom: 16px;
   justify-content: flex-start;
   font-size: 12px;
   line-height: 16px;
   color: var(--color4);
 }
 
+.events__card-date {
+  margin: 0;
+}
+
 .events__card-title {
   margin: 0 0 7px;
-  font-size: 23px;
+  font-size: var(--size24);
   line-height: 33px;
   color: var(--color2);
 }
 
 .events__card-descr {
-  margin: 0;
+  margin: 10px 0;
   color: var(--color2);
 }
 
@@ -1651,12 +1664,13 @@ body {
 
 /* projects */
 
-/*.projects__container {*/
-/*    padding-bottom: 80px;*/
-/*}*/
+.projects {
+  border-bottom: var(--border) var(--color12);
+  padding-bottom: 75px;
+}
 
 .projects__title {
-  margin: 0 0 15px;
+  margin: 9px 0 15px;
 }
 
 .projects__descr {
@@ -1821,7 +1835,7 @@ transition: all .3s ease-in-out;
   position: absolute;
   width: 30px;
   height: 30px;
-  top: 82px;
+  top: 60px;
 }
 
 .projects__swiper-button-prev {
@@ -1859,10 +1873,9 @@ transition: all .3s ease-in-out;
 /* contacts */
 
 .contacts__container {
-  padding: 105px 30px 38px 0;
+  padding: 40px 30px 38px 0;
   justify-content: space-between;
   align-items: center;
-  border-top: var(--border);
   border-bottom: var(--border);
   border-color: var(--color12);
 }
@@ -1886,6 +1899,7 @@ transition: all .3s ease-in-out;
   max-width: 909px;
   width: 100%;
   align-items: center;
+  margin-top: -5px;
 }
 
 .contacts__input-wrap {
@@ -2011,6 +2025,7 @@ transition: all .3s ease-in-out;
 .contacts__map {
   width: 100%;
   height: 700px;
+  border-top: var(--border) var(--color12);
 }
 
 .ymaps-2-1-79-ground-pane {
