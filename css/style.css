@@ -1336,7 +1336,6 @@ body {
 
 .catalog__item-top {
   border-top: var(--border) var(--color12);
-  border-bottom: var(--border) var(--color12);
   transition-property: background-color, color;
   transition-timing-function: ease-in-out;
   transition-duration: .2s;
@@ -1391,6 +1390,7 @@ body {
   position: relative;
   color: var(--color8);
   border-color: var(--color8);
+  border-bottom: var(--border) var(--color8);
 }
 
 .ui-accordion-header-active .catalog__item-top-svg {
@@ -1448,7 +1448,7 @@ body {
   position: relative;
   width: 275px;
   height: 189px;
-  border: 1px solid #b7b7b7;
+  border: var(--border) #b7b7b7;
 }
 .catalog__item-place::before {
   content: '';
@@ -1522,6 +1522,7 @@ body {
   position: absolute;
   width: 50px;
   height: 50px;
+  top: 500px;
 }
 
 .events__swiper-button-prev {
@@ -2026,6 +2027,7 @@ transition: all .3s ease-in-out;
   width: 100%;
   height: 700px;
   border-top: var(--border) var(--color12);
+  /*overflow-x: hidden;*/
 }
 
 .ymaps-2-1-79-ground-pane {

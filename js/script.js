@@ -169,7 +169,7 @@ const swiperEvents = new Swiper('.events__swiper-container', {
 // accordion
 $(".accordion").accordion({
     heightStyle: "content",
-    active: false,
+    // active: true,
     collapsible: true,
     animate: 500
 });
@@ -361,9 +361,6 @@ document.addEventListener('keydown', function (e){
     modal.classList.remove('modal__list--active');
   }
 })
-
-// $(".modal").dialog({modal: true});
-
 
 $(document).ready(function(){
 

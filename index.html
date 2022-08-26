@@ -514,7 +514,7 @@
                         </div>
                         <h3 class="catalog__content-title">Доменико Гирландайо</h3>
                         <span class="catalog__content-descr-color">2&nbsp;июня 1448&nbsp;&mdash; 11&nbsp;января 1494</span>
-                        <p class="catalog__content-descr">    
+                        <p class="catalog__content-descr">
                             Один из&nbsp;ведущих флорентийских художников Кватроченто, основатель художественной династии, которую продолжили его брат Давид и&nbsp;сын Ридольфо. Глава художественной мастерской, где юный Микеланджело в&nbsp;течение года овладевал профессиональными навыками. Автор фресковых циклов, в&nbsp;которых выпукло, со&nbsp;всевозможными подробностями показана домашняя жизнь библейских персонажей (в&nbsp;их&nbsp;роли выступают знатные граждане Флоренции в костюмах того времени)
                         </p>
                     </div>
@@ -846,7 +846,7 @@
                         <div class="events__card-bottom flex">
                             <div class="events__card-content">
                                 <div class="events__card-info">
-                                  <span>ММОМА</span> 
+                                  <span>ММОМА</span>
                                     <p class="events__card-date" >24&nbsp;марта&nbsp;19:00</p>
                                 </div>
                                 <h3 class="events__card-title">«Открытая дискуссия».
@@ -864,7 +864,7 @@
                         <div class="events__card-bottom flex">
                             <div class="events__card-content">
                                 <div class="events__card-info">
-                                    <span>Еврейский музей</span>  
+                                    <span>Еврейский музей</span>
                                     <p class="events__card-date" >с&nbsp;31&nbsp;марта&nbsp;по&nbsp;21&nbsp;апреля</p>
                                 </div>
                                 <h3 class="events__card-title">Выставка &laquo;Формация 2020&raquo;</h3>
@@ -880,7 +880,7 @@
                         <div class="events__card-bottom flex">
                             <div class="events__card-content">
                                 <div class="events__card-info">
-                                    <span>ММАМ</span>  
+                                    <span>ММАМ</span>
                                     <p class="events__card-date" >с&nbsp;8&nbsp;апреля&nbsp;по&nbsp;20&nbsp;мая</p>
                                 </div>
                                 <h3 class="events__card-title">Джон Винзор. Фотографии из&nbsp;серии &laquo;Метафора серебра&raquo;
@@ -897,7 +897,7 @@
                         <div class="events__card-bottom flex">
                             <div class="events__card-content">
                                 <div class="events__card-info">
-                                    <span>Третьяковка&nbsp;на&nbsp;Крымском&nbsp;валу</span> 
+                                    <span>Третьяковка&nbsp;на&nbsp;Крымском&nbsp;валу</span>
                                     <p class="events__card-date" >с&nbsp;30&nbsp;марта&nbsp;по&nbsp;30&nbsp;апреля</p>
                                 </div>
                                 <h3 class="events__card-title">XXIV Международная биеннале молодого искусства</h3>
@@ -1062,8 +1062,8 @@
     <section id="contacts" class="contacts">
       <div class="container contacts__container section-container flex">
           <div class="contacts__address">
-            <h3 class="contacts__address-color">Шоурум №4</h3> 
-              <span>Леонтьевский переулок, дом 5/1</span> 
+            <h3 class="contacts__address-color">Шоурум №4</h3>
+              <span>Леонтьевский переулок, дом 5/1</span>
           </div>
           <form class="contacts__form flex" action="https://jsonplaceholder.typicode.com/posts" method="post">
               <div class="contacts__input-wrap flex">
@@ -1101,22 +1101,23 @@
           </div>
       </div>
       <div id="map" class="contacts__map"></div>
+      <div class="container">
+        <form class="contacts__request-form flex">
+          <!-- Hidden Required Fields -->
+          <input type="hidden" name="project_name" value="Blanchard">
+          <input type="hidden" name="admin_email" value="yanus2likiy@gmail.com">
+          <input type="hidden" name="form_subject" value="Form Request">
+          <!-- END Hidden Required Fields -->
 
-      <form class="contacts__request-form flex">
+          <input class="contacts__input contacts__input-mail" type="text" name="Name" placeholder="Ваше имя" data-validate-field="name" required><br>
+          <input class="contacts__input contacts__input-mail" type="email" name="E-mail" placeholder="Ваш E-mail" data-validate-field="mail" data-validate-rules="mail" required><br>
+          <button type="submit"  aria-label="Отправить" class="contacts__btn-request btn-reset">
+              Отправить
+          </button>
+        </form>
+      </div>
 
-        <!-- Hidden Required Fields -->
-        <input type="hidden" name="project_name" value="Blanchard">
-        <input type="hidden" name="admin_email" value="yanus2likiy@gmail.com">
-        <input type="hidden" name="form_subject" value="Form Request">
-        <!-- END Hidden Required Fields -->
-
-        <input class="contacts__input contacts__input-mail" type="text" name="Name" placeholder="Ваше имя" data-validate-field="name" required><br>
-        <input class="contacts__input contacts__input-mail" type="email" name="E-mail" placeholder="Ваш E-mail" data-validate-field="mail" data-validate-rules="mail" required><br>
-        <button type="submit"  aria-label="Отправить" class="contacts__btn-request btn-reset">
-            Отправить
-        </button>
-    </form>
-    </section>     
+    </section>
   </main>
   <footer class="footer">
     <div class="footer__container">
@@ -1137,7 +1138,7 @@
                         <svg class="footer__item-svg" width="45" height="45" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path class="footer__item-link-svg-path" d="M19.279 14.9859C19.279 16.8409 20.7828 18.3449 22.6379 18.3449C24.4929 18.3449 25.9967 16.8409 25.9967 14.9859C25.9967 13.1309 24.4929 11.6271 22.6379 11.6271C20.7828 11.6271 19.279 13.1309 19.279 14.9859Z" fill="#CACACA"/>
                             <path fill-rule="evenodd" clip-rule="evenodd" d="M22.5 45C34.9264 45 45 34.9264 45 22.5C45 10.0736 34.9264 0 22.5 0C10.0736 0 0 10.0736 0 22.5C0 34.9264 10.0736 45 22.5 45ZM14.5125 14.9858C14.5125 10.4984 18.1503 6.86047 22.6379 6.86047C27.1254 6.86047 30.7632 10.4984 30.7632 14.9858C30.7632 19.4734 27.1254 23.1115 22.6379 23.1115C18.1503 23.1115 14.5125 19.4734 14.5125 14.9858ZM30.8117 27.291C30.7086 27.3737 28.7593 28.9142 25.5064 29.5769L30.4165 34.4432C31.28 35.3053 31.2811 36.7042 30.419 37.5677C29.5569 38.431 28.1583 38.4324 27.2945 37.5701L22.5276 32.928L18.1979 37.5402C17.7644 37.9899 17.1862 38.216 16.6074 38.216C16.0553 38.216 15.5027 38.0106 15.074 37.5972C14.1956 36.7502 14.1701 35.3516 15.0171 34.4733L19.6777 29.6025C16.3336 28.9555 14.3039 27.3749 14.1993 27.291C13.2475 26.5277 13.0946 25.1372 13.8579 24.1852C14.6212 23.2334 16.0115 23.0805 16.9636 23.8437C16.9837 23.86 19.1067 25.4549 22.5275 25.4572C25.9483 25.4549 28.0273 23.86 28.0474 23.8437C28.9995 23.0805 30.3899 23.2334 31.1531 24.1852C31.9165 25.1372 31.7636 26.5277 30.8117 27.291Z" fill="#CACACA"/>
-                        </svg>    
+                        </svg>
                     </a>
                 </li>
             </ul>
