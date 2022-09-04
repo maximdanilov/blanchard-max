@@ -125,6 +125,7 @@ body {
 
 .section-container {
   padding-top: 70px;
+  margin-left: 155px;
 }
 
 .section-title {
@@ -173,6 +174,7 @@ body {
 
 .header__top-container {
   position: relative;
+  margin-left: 150px;
 }
 
 .header__top-content {
@@ -403,6 +405,10 @@ body {
 /*header-bottom*/
 .header__bottom {
   background-color: rgba(0, 0, 0, 0.4);
+}
+
+.header__bottom-container {
+  margin-left: 150px;
 }
 
 .header__bottom-content {
@@ -1500,7 +1506,7 @@ body {
 
 .events__container {
   position: relative;
-  margin-top: 8px;
+  margin-top: 13px;
 }
 
 .events__title {
