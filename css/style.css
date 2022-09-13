@@ -124,8 +124,7 @@ body {
 }
 
 .section-container {
-  padding-top: 70px;
-  margin-left: 155px;
+  padding-top: 65px;
 }
 
 .section-title {
@@ -174,7 +173,7 @@ body {
 
 .header__top-container {
   position: relative;
-  margin-left: 150px;
+  /*margin-left: 150px;*/
 }
 
 .header__top-content {
@@ -219,7 +218,7 @@ body {
 }
 
 .header__burger:focus-visible:not(:active) .header__burger-line,
-.header__burger:hover .burger__line {
+.header__burger:hover .header__burger-line {
   background-color: var(--color6);
 }
 
@@ -240,6 +239,7 @@ body {
 
 .header__logo {
   margin-right: auto;
+  /*margin-left: auto;*/
 }
 
 .header__nav {
@@ -407,9 +407,9 @@ body {
   background-color: rgba(0, 0, 0, 0.4);
 }
 
-.header__bottom-container {
-  margin-left: 150px;
-}
+/*.header__bottom-container {*/
+/*  margin-left: 150px;*/
+/*}*/
 
 .header__bottom-content {
   display: flex;
@@ -685,16 +685,11 @@ body {
 .hero {
   position: relative;
   margin-top: calc(-1.7 * 70px);
-  padding: 140px 0 122px;
+  padding: 120px 0 130px;
   animation: clr 5s infinite;
   z-index: -1;
   background-repeat: no-repeat;
   background-size: cover;
-}
-
-.hero__container {
-  padding: 0 0 0 0;
-  overflow: hidden;
 }
 
 @keyframes clr
@@ -709,7 +704,7 @@ body {
   flex-direction: column;
   align-items: flex-start;
   width: 35%;
-  margin-top: 35px;
+  padding-top: 65px;
 }
 
 .hero__title {
@@ -717,12 +712,12 @@ body {
   padding: 0;
   font-weight: var(--weight7);
   font-size: 72px;
-  line-height: 98px;
+  line-height: 90px;
   color: var(--color14);
 }
 
 .hero__descr {
-  margin: 0 0 92px;
+  margin: 0 0 105px;
   padding: 0;
   font-weight: var(--weight7);
   font-size: var(--size18);
@@ -739,36 +734,49 @@ body {
   color: var(--color14);
   flex-wrap: nowrap;
   text-align: center;
+  cursor: pointer;
+  transition: outline 0.3s ease-in-out, background-color 0.3s ease-in-out, opacity 0.3s ease-in-out;
 }
 
-.hero__link::before {
-  content: "";
-  position: absolute;
-  top: -6px;
-  bottom: -6px;
-  left: -6px;
-  right: -6px;
-  border: 2px solid var(--color6);
-  border-radius: 100px;
-  opacity: 0;
-  transition-property: opacity, box-shadow, background-color;
-  transition-timing-function: ease-in-out;
-  transition-duration: .2s;
-}
+/*.hero__link::before {*/
+/*  content: "";*/
+/*  position: absolute;*/
+/*  top: -6px;*/
+/*  bottom: -6px;*/
+/*  left: -6px;*/
+/*  right: -6px;*/
+/*  border: 2px solid var(--color6);*/
+/*  border-radius: 100px;*/
+/*  opacity: 0;*/
+/*  transition-property: opacity, box-shadow, background-color;*/
+/*  transition-timing-function: ease-in-out;*/
+/*  transition-duration: .2s;*/
+/*}*/
+/*.hero__link:focus-visible {*/
+/*  outline: none;*/
+/*}*/
+/*.hero__link:focus-visible:not(:hover) {*/
+/*  opacity: 1;*/
+/*}*/
+/*.hero__link:hover {*/
+/*  -webkit-box-shadow: inset 0 0 0 3px var(--color5);*/
+/*  box-shadow: inset 0 0 0 3px var(--color5);*/
+/*}*/
+/*.hero__link:active {*/
+/*  background-color: var(--color8);*/
+/*  -webkit-box-shadow: inset 0 0 0 3px var(--color5);*/
+/*  box-shadow: inset 0 0 0 3px var(--color5);*/
+/*}*/
 .hero__link:focus-visible {
-  outline: none;
-}
-.hero__link:focus-visible:not(:hover)::before {
-  opacity: 1;
+  outline: 3px solid var(--color5);
 }
 .hero__link:hover {
-  -webkit-box-shadow: inset 0 0 0 3px var(--color5);
-  box-shadow: inset 0 0 0 3px var(--color5);
+  outline: 3px solid var(--color5);
+  outline-offset: 5px;
 }
 .hero__link:active {
   background-color: var(--color8);
-  -webkit-box-shadow: inset 0 0 0 3px var(--color5);
-  box-shadow: inset 0 0 0 3px var(--color5);
+  border: 3px solid var(--color5);
 }
 
 .about {
@@ -795,7 +803,7 @@ body {
 
 .gallery__container {
   margin-top: 40px;
-  padding-bottom: 70px;
+  padding-bottom: 79px;
 }
 
 .gallery__title {
@@ -1031,7 +1039,7 @@ body {
   opacity: 0;
   transition-property: box-shadow, opacity;
   transition-timing-function: linear;
-  transition-duration: .2s;
+  transition-duration: .3s;
 }
 
 .gallery__slide-wrap:focus::before {
@@ -1107,6 +1115,11 @@ body {
 .gallery__swiper-button-next-svg:focus-visible:not(:hover):not(:active) .gallery__svg-focus,
 .gallery__swiper-button-prev-svg:focus-visible:not(:hover):not(:active) .gallery__svg-focus {
   stroke-width: 2;
+}
+
+.gallery__swiper-button-next-svg-path,
+.gallery__swiper-button-prev-svg-path {
+  transition: fill 0.3s ease-in-out;
 }
 
 .gallery__swiper-button-next-svg-path:hover,
@@ -1506,7 +1519,7 @@ body {
 
 .events__container {
   position: relative;
-  margin-top: 13px;
+  margin-top: 20px;
 }
 
 .events__title {
@@ -1564,6 +1577,11 @@ body {
 .events__swiper-button-next-svg:focus-visible:not(:hover):not(:active) .events__svg-focus {
   outline: none;
   stroke: var(--color7);
+}
+
+.events__swiper-button-prev-svg-path
+.events__swiper-button-next-svg-path {
+  transition: fill 0.3s ease-in-out;
 }
 
 .events__swiper-button-prev-svg-path:hover,
@@ -1881,6 +1899,7 @@ transition: all .3s ease-in-out;
 
 .contacts__container {
   padding: 40px 30px 38px 0;
+  flex-direction: row;
   justify-content: space-between;
   align-items: center;
   border-bottom: var(--border);
@@ -1957,22 +1976,22 @@ transition: all .3s ease-in-out;
   color: var(--color7);
 }
 
-.contacts__btn::before {
-  content: "";
-  position: absolute;
-  top: -6px;
-  bottom: -6px;
-  left: -6px;
-  right: -6px;
-  background-color: inherit;
-  border: 2px solid var(--color6);
-  border-radius: 90px;
-  z-index: -1;
-  opacity: 0;
-  transition-property: opacity, color;
-  transition-duration: 0.2s;
-  transition-timing-function: ease-in-out;
-}
+/*.contacts__btn::before {*/
+/*  content: "";*/
+/*  position: absolute;*/
+/*  top: -6px;*/
+/*  bottom: -6px;*/
+/*  left: -6px;*/
+/*  right: -6px;*/
+/*  background-color: inherit;*/
+/*  border: 2px solid var(--color6);*/
+/*  border-radius: 90px;*/
+/*  z-index: -1;*/
+/*  opacity: 0;*/
+/*  transition-property: opacity, color;*/
+/*  transition-duration: 0.3s;*/
+/*  transition-timing-function: ease-in-out;*/
+/*}*/
 
 .contacts__btn:focus-visible {
   outline: none;
@@ -2033,7 +2052,6 @@ transition: all .3s ease-in-out;
   width: 100%;
   height: 700px;
   border-top: var(--border) var(--color12);
-  overflow-x: hidden;
 }
 
 .ymaps-2-1-79-ground-pane {
