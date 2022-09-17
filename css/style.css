@@ -124,7 +124,7 @@ body {
 }
 
 .section-container {
-  padding-top: 65px;
+  padding-top: 71px;
 }
 
 .section-title {
@@ -167,13 +167,15 @@ body {
 }
 
 /*header-top*/
+.header {
+  position: relative;
+}
 .header__top {
   background-color: var(--color1);
 }
 
 .header__top-container {
   position: relative;
-  /*margin-left: 150px;*/
 }
 
 .header__top-content {
@@ -406,10 +408,6 @@ body {
 .header__bottom {
   background-color: rgba(0, 0, 0, 0.4);
 }
-
-/*.header__bottom-container {*/
-/*  margin-left: 150px;*/
-/*}*/
 
 .header__bottom-content {
   display: flex;
@@ -683,9 +681,9 @@ body {
 
 /*hero*/
 .hero {
-  position: relative;
+  /*position: relative;*/
   margin-top: calc(-1.7 * 70px);
-  padding: 120px 0 130px;
+  padding: 120px 0 120px;
   animation: clr 5s infinite;
   z-index: -1;
   background-repeat: no-repeat;
@@ -717,7 +715,7 @@ body {
 }
 
 .hero__descr {
-  margin: 0 0 105px;
+  margin: 0 0 103px;
   padding: 0;
   font-weight: var(--weight7);
   font-size: var(--size18);
@@ -726,7 +724,7 @@ body {
 }
 
 .hero__link {
-  padding: 20px 35px;
+  padding: 18px 35px;
   font-weight: var(--weight7);
   font-size: var(--size18);
   border-radius: 100px;
@@ -734,7 +732,6 @@ body {
   color: var(--color14);
   flex-wrap: nowrap;
   text-align: center;
-  cursor: pointer;
   transition: outline 0.3s ease-in-out, background-color 0.3s ease-in-out, opacity 0.3s ease-in-out;
 }
 
@@ -776,7 +773,8 @@ body {
 }
 .hero__link:active {
   background-color: var(--color8);
-  border: 3px solid var(--color5);
+  outline: 3px solid var(--color5);
+  outline-offset: 0;
 }
 
 .about {
@@ -1281,10 +1279,6 @@ body {
   padding-bottom: 78px;
 }
 
-.catalog__title {
-  padding-top: 10px;
-}
-
 .catalog__descr {
   margin-top: 12px;
   margin-bottom: 45px;
@@ -1320,7 +1314,7 @@ body {
 }
 
 .catalog__content-descr {
-  margin: 0;
+  margin: -5px;
   color: var(--color2);
 }
 
@@ -1435,7 +1429,7 @@ body {
   display: grid;
   grid-auto-flow: column;
   grid-template-rows: repeat(9, 1fr);
-  grid-gap: 0 60px;
+  /*grid-gap: 0 60px;*/
 }
 
 .catalog__bottom-item {
@@ -1645,7 +1639,7 @@ body {
 }
 
 .events__card-info {
-  margin-bottom: 16px;
+  margin-bottom: 10px;
   justify-content: flex-start;
   font-size: 12px;
   line-height: 16px;
@@ -1658,13 +1652,15 @@ body {
 
 .events__card-title {
   margin: 0 0 7px;
+  font-weight: var(--weight6);
   font-size: var(--size24);
   line-height: 33px;
   color: var(--color2);
 }
 
 .events__card-descr {
-  margin: 10px 0;
+  font-weight: var(--weight4);
+  margin: 0;
   color: var(--color2);
 }
 
