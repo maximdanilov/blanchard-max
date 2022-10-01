@@ -1,3 +1,7 @@
+$('a').on('click', function(e) {
+  e.preventDefault();
+});
+
 // burger events
 let burger = document.querySelector('.header__burger');
 let menu = document.querySelector('.header__nav');
@@ -99,36 +103,144 @@ const choiceGallery = new Choices(elemenGallery, {
 });
 
 // swiper
-const swiper = new Swiper('.gallery__swiper-container', {
+
+document.addEventListener("DOMContentLoaded", () => {
+  let gallerySlider = new Swiper(".gallery__slides-container", {
     slidesPerView: 1,
-    slidesPerGroup: 1,
-    // spaceBetween: 50,
-    loop: false,
-    navigation: {
-        nextEl: '.gallery__swiper-button-next',
-        prevEl: '.gallery__swiper-button-prev',
+    grid: {
+      rows: 1,
+      fill: "row"
     },
     pagination: {
-        el: '.gallery__swiper-pagination',
-        type: 'fraction',
+      el: ".gallery__pagination",
+      type: "fraction"
     },
+    navigation: {
+      nextEl: ".gallery__btn-next",
+      prevEl: ".gallery__btn-prev"
+    },
+
     breakpoints: {
-        480: {
-            slidesPerView: 2,
-            spaceBetween: 38,
-            slidesPerGroup: 2,
-        },
-        1008: {
-            slidesPerView: 2,
-            spaceBetween: 34,
-            slidesPerGroup: 2,
-        },
-        1760: {
-            slidesPerView: 3,
-            spaceBetween: 50,
-            slidesPerGroup: 3,
-        }
+      441: {
+        slidesPerView: 2,
+        spaceBetween: 20,
+        slidesPerGroup: 2,
+      },
+
+      1200: {
+        slidesPerView: 2,
+        spaceBetween: 50,
+        slidesPerGroup: 2,
+      },
+      1760: {
+        slidesPerView: 3,
+        spaceBetween: 50,
+        slidesPerGroup: 3,
     }
+    },
+
+    a11y: false,
+    keyboard: {
+      enabled: true,
+      onlyInViewport: true
+    }
+  })
+})
+
+const btn = document.querySelectorAll('.gallery__slide');
+const modal = document.querySelector('.modal__list');
+const notes = document.querySelectorAll('.modal__item');
+const exitBtn = document.querySelectorAll('.modal__btn-close');
+
+btn.forEach(function (element) {
+  element.addEventListener('click', function (e) {
+    document.body.classList.toggle('stop-scroll');
+
+    let path = e.currentTarget.getAttribute('data-path');
+
+    notes.forEach(function (el) {
+     el.classList.remove('modal__item--active');
+    })
+
+    document.querySelector(`[data-gallery="${path}"]`).classList.add('modal__item--active');
+    modal.classList.add('modal__list--active');
+
+    setTimeout(function() {
+      let activeModal = document.querySelector('.modal__item--active');
+      activeModal.querySelector('.modal__btn-close').focus();
+    }, 4000);
+  });
+});
+
+exitBtn.forEach(function (btn) {
+  btn.addEventListener('click', function () {
+    document.body.classList.remove('stop-scroll');
+    modal.classList.remove('modal__list--active');
+    notes.classList.remove('modal__item--active');
+  });
+})
+
+modal.addEventListener('click', function (el){
+  if (el.target === modal) {
+    notes.forEach(function (el) {
+      el.classList.remove('modal__item--active');
+    })
+    document.body.classList.remove('stop-scroll');
+    modal.classList.remove('modal__list--active');
+  }
+})
+
+document.addEventListener('keydown', function (e){
+  if (e.key === 'Escape') {
+    notes.forEach(function (el) {
+      el.classList.remove('modal__item--active');
+    })
+    document.body.classList.remove('stop-scroll');
+    modal.classList.remove('modal__list--active');
+  }
+})
+
+// catalog
+document.addEventListener('DOMContentLoaded', function () {
+  $( ".accordion" ).accordion({
+      collapsible: true,
+      active: 0,
+      icons: false,
+      heightStyle: 'content'
+    });
+});
+
+document.querySelectorAll('.catalog__item-top').forEach(function (el) {
+  el.addEventListener('mousedown', e => e.preventDefault());
+});
+
+// tab
+document.querySelectorAll('.catalog__bottom-btn').forEach(function (tabsBtn) {
+  tabsBtn.addEventListener('click', function (e) {
+      const path = e.currentTarget.dataset.path;
+      document.querySelectorAll('.catalog__bottom-btn').forEach(function (btn) {
+          btn.classList.remove('catalog__bottom-btn--active')
+      });
+      e.currentTarget.classList.add('catalog__bottom-btn--active');
+      document.querySelectorAll('.catalog__content-info').forEach(function (tabsBtn) {
+          tabsBtn.classList.remove('catalog__content-info--active')
+      });
+      document.querySelector(`[data-target="${path}"]`).classList.add('catalog__content-info--active');
+  });
+});
+
+$(document).ready(function(){
+
+	$('.catalog__bottom-btn').click(function(e){
+		e.preventDefault();
+
+		let href = $(this).attr('href');
+		let offset = $(href).offset().top - $('.header').outerHeight();
+        console.log(offset)
+		$('body, html').animate({
+			scrollTop: offset,
+		}, 500);
+	});
 });
 
 // events
@@ -139,8 +251,8 @@ const swiperEvents = new Swiper('.events__swiper-container', {
     spaceBetween: 40,
     loop: false,
     navigation: {
-        nextEl: '.events__swiper-button-next',
-        prevEl: '.events__swiper-button-prev',
+        nextEl: '.events__btn-next',
+        prevEl: '.events__btn-prev',
     },
     pagination: {
         el: '.events__swiper-pagination',
@@ -164,97 +276,112 @@ const swiperEvents = new Swiper('.events__swiper-container', {
         },
     }
 });
-    
-// catalog
-// accordion
-$(".accordion").accordion({
-    heightStyle: "content",
-    // active: true,
-    collapsible: true,
-    animate: 500
-});
-document.querySelectorAll('.catalog__item-top').forEach(function (el) {
-    el.addEventListener('mousedown', e => e.preventDefault());
-});
-
-// tab
-document.querySelectorAll('.catalog__bottom-btn').forEach(function (tabsBtn) {
-    tabsBtn.addEventListener('click', function (e) {
-        const path = e.currentTarget.dataset.path;
-        document.querySelectorAll('.catalog__bottom-btn').forEach(function (btn) {
-            btn.classList.remove('catalog__bottom-btn--active')
-        });
-        e.currentTarget.classList.add('catalog__bottom-btn--active');
-        document.querySelectorAll('.catalog__content-info').forEach(function (tabsBtn) {
-            tabsBtn.classList.remove('catalog__content-info--active')
-        });
-        document.querySelector(`[data-target="${path}"]`).classList.add('catalog__content-info--active');
-    });
-});
 
 // projects
-// swiper
-const swiperProjects = new Swiper('.projects__swiper-container', {
+
+const swiperProjects = new Swiper('.projects__slider', {
     slidesPerView: 1,
     slidesPerGroup: 1,
     // spaceBetween: 50,
     loop: false,
     navigation: {
-        nextEl: '.projects__swiper-button-next',
-        prevEl: '.projects__swiper-button-prev',
+        nextEl: '.project__btn-next',
+        prevEl: '.project__btn-prev',
+    },
+    pagination: {
+      el: '.projects__swiper-pagination',
+      clickable: true
     },
     breakpoints: {
-        500: {
+        681: {
             slidesPerView: 2,
-            spaceBetween: 33.97,
+            spaceBetween: 34,
             slidesPerGroup: 2,
         },
-        1008: {
+        1024: {
             slidesPerView: 2,
             spaceBetween: 50,
-            slidesPerGroup: 2,
+            // slidesPerGroup: 2,
         },
-        1750: {
+        1281: {
             slidesPerView: 3,
             spaceBetween: 50,
-            slidesPerGroup: 3,
+            // slidesPerGroup: 3,
         }
     },
 })
 
-// map
-ymaps.ready(init);
-function init() {
-    var myMap = new ymaps.Map("map", {
-        center: [55.760109, 37.591952],
-        zoom: 14,
-        controls: [],
-    });
-    var myPlacemark = new ymaps.Placemark([55.760109, 37.591952], {}, {
-        iconLayout: 'default#image',
-        iconImageHref: 'img/placemarker.svg',
-        iconImageSize: [20, 20],
-        iconImageOffset: [-2, -40],
-    });
+// projects
 
-    myMap.controls.add('zoomControl', {
-        float: 'none',
-        position: {
-            right: 11,
-            top: 300
-        }
-    }).add('geolocationControl', {
-        float: 'none',
-        position: {
-            right: 11,
-            top: 380
-        }
-    });
-    myMap.geoObjects.add(myPlacemark);
-}
+tippy('.projects__tooltip', {
+    trigger: 'click',
+    theme: 'tooltip',
+    maxWidth: 350,
+  });
 
 // contacts
-//form
+ymaps.ready(init);
+function init() {
+  const mapElem = document.querySelector("map");
+  const myMap = new ymaps.Map(
+    "map",
+    {
+      center: [55.75846806898367, 37.60108849999989],
+      zoom: 14,
+      controls: ["geolocationControl", "zoomControl"]
+    },
+    {
+      suppressMapOpenBlock: true,
+      geolocationControlSize: "large",
+      geolocationControlPosition: { top: "300px", right: "20px" },
+      geolocationControlFloat: "none",
+      zoomControlSize: "small",
+      zoomControlFloat: "none",
+      zoomControlPosition: { top: "200px", right: "20px" }
+    }
+  );
+
+  if (window.matchMedia("(max-width: 1280px)").matches) {
+    if (Object.keys(myMap.controls._controlKeys).length) {
+      myMap.controls.remove('zoomControl');
+      myMap.controls.remove('geolocationControl');
+    }
+  }
+
+  myMap.behaviors.disable("scrollZoom");
+
+  myMap.events.add("sizechange", function (e) {
+    if (window.matchMedia("(max-width: 1280px)").matches) {
+      if (Object.keys(myMap.controls._controlKeys).length) {
+        myMap.controls.remove('zoomControl');
+        myMap.controls.remove('geolocationControl');
+      }
+    } else {
+      if (!Object.keys(myMap.controls._controlKeys).length) {
+        myMap.controls.add('zoomControl');
+        myMap.controls.add('geolocationControl');
+      }
+    }
+  });
+
+  const myPlacemark = new ymaps.Placemark(
+    [55.75846806898367, 37.60108849999989],
+    {},
+    {
+      iconLayout: "default#image",
+      iconImageHref: "https://img.icons8.com/office/2x/one-free.png",
+      iconImageSize: [40, 40],
+      iconImageOffset: [-20, -40]
+    }
+  );
+
+  myMap.geoObjects.add(myPlacemark);
+  myMap.container.fitToViewport();
+}
+
+
+// contacts
+
 let selector = document.querySelector("input[type='tel']");
 let im = new Inputmask("+7 (999) 999-99-99");
 im.mask(selector);
@@ -309,77 +436,10 @@ new JustValidate('.contacts__request-form', {
     }
 });
 
-const btn = document.querySelectorAll('.gallery__slide-wrap');
-const modal = document.querySelector('.modal__list');
-const notes = document.querySelectorAll('.modal__item');
-const exitBtn = document.querySelectorAll('.modal__btn-close');
-
-btn.forEach(function (element) {
-  element.addEventListener('click', function (e) {
-    document.body.classList.toggle('stop-scroll');
-
-    let path = e.currentTarget.getAttribute('data-path');
-
-    notes.forEach(function (el) {
-     el.classList.remove('modal__item--active');
-    })
-
-    document.querySelector(`[data-gallery="${path}"]`).classList.add('modal__item--active');
-    modal.classList.add('modal__list--active');
-
-    setTimeout(function() {
-      let activeModal = document.querySelector('.modal__item--active');
-      activeModal.querySelector('.modal__btn-close').focus();
-    }, 4000);
-  });
-});
-
-exitBtn.forEach(function (btn) {
-  btn.addEventListener('click', function () {
-    document.body.classList.remove('stop-scroll');
-    modal.classList.remove('modal__list--active');
-    notes.classList.remove('modal__item--active');
-  })
-})
-
-modal.addEventListener('click', function (el){
-  if (el.target === modal) {
-    notes.forEach(function (el) {
-      el.classList.remove('modal__item--active');
-    })
-    document.body.classList.remove('stop-scroll');
-    modal.classList.remove('modal__list--active');
-  }
-})
-
-document.addEventListener('keydown', function (e){
-  if (e.key === 'Escape') {
-    notes.forEach(function (el) {
-      el.classList.remove('modal__item--active');
-    })
-    document.body.classList.remove('stop-scroll');
-    modal.classList.remove('modal__list--active');
-  }
-})
-
-$(document).ready(function(){
-
-	$('.catalog__bottom-btn').click(function(e){
-		e.preventDefault();
-
-		let href = $(this).attr('href');
-		let offset = $(href).offset().top - $('.header').outerHeight();
-        console.log(offset)
-		$('body, html').animate({
-			scrollTop: offset,
-		}, 500);
-	});
-});
-
 $(document).ready(function() {
 
 	//E-mail Ajax Send
-	$(".contacts__request-form").submit(function() { //Change
+	$(".contacts__form").submit(function() { //Change
 		var th = $(this);
 		$.ajax({
 			type: "POST",
@@ -395,3 +455,4 @@ $(document).ready(function() {
 		return false;
 	});
 });
+
