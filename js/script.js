@@ -251,8 +251,8 @@ const swiperEvents = new Swiper('.events__swiper-container', {
     spaceBetween: 40,
     loop: false,
     navigation: {
-        nextEl: '.events__btn-next',
-        prevEl: '.events__btn-prev',
+        nextEl: '.events-btn-next',
+        prevEl: '.events-btn-prev',
     },
     pagination: {
         el: '.events__swiper-pagination',
@@ -285,28 +285,25 @@ const swiperProjects = new Swiper('.projects__slider', {
     // spaceBetween: 50,
     loop: false,
     navigation: {
-        nextEl: '.project__btn-next',
-        prevEl: '.project__btn-prev',
+        nextEl: '.project-btn-next',
+        prevEl: '.project-btn-prev',
     },
     pagination: {
       el: '.projects__swiper-pagination',
       clickable: true
     },
     breakpoints: {
-        681: {
+        688: {
             slidesPerView: 2,
-            spaceBetween: 34,
-            slidesPerGroup: 2,
+            spaceBetween: 30,
         },
-        1024: {
+        1009: {
             slidesPerView: 2,
             spaceBetween: 50,
-            // slidesPerGroup: 2,
         },
         1281: {
             slidesPerView: 3,
             spaceBetween: 50,
-            // slidesPerGroup: 3,
         }
     },
 })
