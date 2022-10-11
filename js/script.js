@@ -1,7 +1,3 @@
-$('a').on('click', function(e) {
-  e.preventDefault();
-});
-
 // burger events
 let burger = document.querySelector('.header__burger');
 let menu = document.querySelector('.header__nav');
@@ -123,13 +119,13 @@ document.addEventListener("DOMContentLoaded", () => {
     breakpoints: {
       441: {
         slidesPerView: 2,
-        spaceBetween: 20,
+        spaceBetween: 50,
         slidesPerGroup: 2,
       },
 
       1200: {
         slidesPerView: 2,
-        spaceBetween: 50,
+        spaceBetween: 40,
         slidesPerGroup: 2,
       },
       1760: {
@@ -206,7 +202,7 @@ document.addEventListener('DOMContentLoaded', function () {
       collapsible: true,
       active: 0,
       icons: false,
-      heightStyle: 'content'
+      heightStyle: '.catalog__bottom-list-wrap'
     });
 });
 
@@ -229,6 +225,12 @@ document.querySelectorAll('.catalog__bottom-btn').forEach(function (tabsBtn) {
   });
 });
 
+$(document).ready(function () {
+    $('.gallery__slide').click(function (e) {
+        e.preventDefault();
+    })
+})
+
 $(document).ready(function(){
 
 	$('.catalog__bottom-btn').click(function(e){
@@ -244,11 +246,10 @@ $(document).ready(function(){
 });
 
 // events
-// swiper
 const swiperEvents = new Swiper('.events__swiper-container', {
     slidesPerView: 1,
     slidesPerGroup: 1,
-    spaceBetween: 40,
+    spaceBetween: 20,
     loop: false,
     navigation: {
         nextEl: '.events-btn-next',
@@ -259,9 +260,9 @@ const swiperEvents = new Swiper('.events__swiper-container', {
         clickable: true
     },
     breakpoints: {
-        687: {
+        659: {
             slidesPerView: 2,
-            spaceBetween: 34,
+            spaceBetween: 24,
             slidesPerGroup: 2,
         },
         1000: {
@@ -278,7 +279,6 @@ const swiperEvents = new Swiper('.events__swiper-container', {
 });
 
 // projects
-
 const swiperProjects = new Swiper('.projects__slider', {
     slidesPerView: 1,
     slidesPerGroup: 1,
@@ -309,7 +309,6 @@ const swiperProjects = new Swiper('.projects__slider', {
 })
 
 // projects
-
 tippy('.projects__tooltip', {
     trigger: 'click',
     theme: 'tooltip',
@@ -323,7 +322,7 @@ function init() {
   const myMap = new ymaps.Map(
     "map",
     {
-      center: [55.75846806898367, 37.60108849999989],
+      center: [55.760109, 37.591952],
       zoom: 14,
       controls: ["geolocationControl", "zoomControl"]
     },
@@ -366,16 +365,15 @@ function init() {
     {},
     {
       iconLayout: "default#image",
-      iconImageHref: "https://img.icons8.com/office/2x/one-free.png",
-      iconImageSize: [40, 40],
-      iconImageOffset: [-20, -40]
+      iconImageHref: 'img/placemarker.svg',
+      iconImageSize: [20, 20],
+      iconImageOffset: [-2, -40]
     }
   );
 
   myMap.geoObjects.add(myPlacemark);
   myMap.container.fitToViewport();
 }
-
 
 // contacts
 
@@ -409,29 +407,29 @@ new JustValidate('.contacts__form', {
         },
     }
 });
-new JustValidate('.contacts__request-form', {
-    rules: {
-        name: {
-            required: true,
-            minLength: 2,
-            maxLength: 30
-        },
-        mail: {
-            required: true,
-            email: true
-        }
-    },
-    messages: {
-        name: {
-            required: "Как вас зовут?",
-            minLength: "Недопустимый формат",
-        },
-        mail: {
-            required: "Укажите ваш email",
-            function: "Недопустимый формат",
-        }
-    }
-});
+// new JustValidate('.contacts__request-form', {
+//     rules: {
+//         name: {
+//             required: true,
+//             minLength: 2,
+//             maxLength: 30
+//         },
+//         mail: {
+//             required: true,
+//             email: true
+//         }
+//     },
+//     messages: {
+//         name: {
+//             required: "Как вас зовут?",
+//             minLength: "Недопустимый формат",
+//         },
+//         mail: {
+//             required: "Укажите ваш email",
+//             function: "Недопустимый формат",
+//         }
+//     }
+// });
 
 $(document).ready(function() {
 

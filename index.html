@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="libs/choices.min.css">
     <link rel="stylesheet" href="libs/swiper.min.css">
-    <link rel="stylesheet" href="https://unpkg.com/simplebar@latest/dist/simplebar.css"/>
+    <link rel="stylesheet" href="https://unpkg.com/simplebar@latest/dist/simplebar.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/media.css">
     <link rel="shortcut icon" href="img/favicon.svg" type="image/x-icon">
@@ -328,7 +328,7 @@
                 </a>
                 <a class="swiper-slide gallery__slide" href="#" data-path="six">
                   <picture>
-                    <source srcset="img/gallery-slide-320px-6.png" media="(max-width: 687px)">
+<!--                    <source srcset="img/gallery-slide-320px-6.png" media="(max-width: 687px)">-->
                     <source srcset="img/gallery-slide-768px-6.png" media="(max-width: 1008px)">
                     <source srcset="img/gallery-slide-1024px-6.png" media="(max-width: 1420px)">
                     <img class="gallery__image" src="img/gallery-slide-1920px-6.png" alt="">
@@ -769,7 +769,7 @@
                         </li>
                         <li class="catalog__item">
                             <div class="catalog__item-top">
-                              <h3 class="catalog__item-top-title catalog__item-top-border" aria-label="Развернуть">
+                              <h3 class="catalog__item-top-title" aria-label="Развернуть">
                                 <span class="catalog__item-top-text">
                                   <span class="catalog__item-top-text-wrap">C 2000&nbsp;г.</span>
                                 </span>
@@ -797,96 +797,99 @@
     <section id="events" class="events">
         <div class="container section-container events__container">
             <h2 class="events__title section-title">События</h2>
-            <div class="events__swiper-container">
-              <button class="nav-btn events-btn events-btn-prev events-slider-nav-btn events-slider-nav-btn-prev btn-animate" aria-label="К предыдущему слайду"></button>
-                <ul class="events__swiper-wrapper swiper-wrapper list-reset">
-                    <li class="events__card swiper-slide">
-                        <div class="events__card-top events__card-top-1"></div>
-                        <div class="events__card-bottom flex">
-                            <div class="events__card-content">
-                                <div class="events__card-info">
-                                    <span>Музей&nbsp;им.&nbsp;Щусева</span>
-                                    <p class="events__card-date" >с&nbsp;20&nbsp;марта&nbsp;по&nbsp;30&nbsp;апреля</p>
+            <div class="events__wrapper">
+                <div class="events__swiper-container">
+                  <button class="nav-btn events-btn events-btn-prev events-slider-nav-btn events-slider-nav-btn-prev btn-animate" aria-label="К предыдущему слайду"></button>
+                    <ul class="events__swiper-wrapper swiper-wrapper list-reset">
+                        <li class="events__card swiper-slide">
+                            <div class="events__card-top events__card-top-1"></div>
+                            <div class="events__card-bottom flex">
+                                <div class="events__card-content">
+                                    <div class="events__card-info">
+                                        <span>Музей&nbsp;им.&nbsp;Щусева</span>
+                                        <p class="events__card-date" >с&nbsp;20&nbsp;марта&nbsp;по&nbsp;30&nbsp;апреля</p>
+                                    </div>
+                                    <h3 class="events__card-title">Книжная гравюра в живом восприятии</h3>
+                                    <p class="events__card-descr">
+                                        Один из ведущих флорентийских&nbsp;художников Кватроченто, основатель художественной династии, которую продолжили его брат&nbsp;Давид и сын Ридольфо.
+                                    </p>
                                 </div>
-                                <h3 class="events__card-title">Книжная гравюра в живом восприятии</h3>
-                                <p class="events__card-descr">
-                                    Один из ведущих флорентийских&nbsp;художников Кватроченто, основатель художественной династии, которую продолжили его брат&nbsp;Давид и сын Ридольфо.
-                                </p>
+                                <a class="events__card-link" href="#">Подробнее</a>
                             </div>
-                            <a class="events__card-link" href="#">Подробнее</a>
-                        </div>
-                    </li>
-                    <li class="events__card swiper-slide">
-                        <div class="events__card-top events__card-top-2"></div>
-                        <div class="events__card-bottom flex">
-                            <div class="events__card-content">
-                                <div class="events__card-info">
-                                  <span>ММОМА</span>
-                                    <p class="events__card-date" >24&nbsp;марта&nbsp;19:00</p>
+                        </li>
+                        <li class="events__card swiper-slide">
+                            <div class="events__card-top events__card-top-2"></div>
+                            <div class="events__card-bottom flex">
+                                <div class="events__card-content">
+                                    <div class="events__card-info">
+                                      <span>ММОМА</span>
+                                        <p class="events__card-date" >24&nbsp;марта&nbsp;19:00</p>
+                                    </div>
+                                    <h3 class="events__card-title">«Открытая дискуссия».
+                                        Дмитрий Петров и&nbsp;Сергей Ильин.
+                                    </h3>
+                                    <p class="events__card-descr">
+                                        Высокий уровень вовлечения представителей целевой аудитории является четким доказательством простого факта.
+                                    </p>
                                 </div>
-                                <h3 class="events__card-title">«Открытая дискуссия».
-                                    Дмитрий Петров и&nbsp;Сергей Ильин.
-                                </h3>
-                                <p class="events__card-descr">
-                                    Высокий уровень вовлечения представителей целевой аудитории является четким доказательством простого факта.
-                                </p>
+                                <a class="events__card-link" href="#">Подробнее</a>
                             </div>
-                            <a class="events__card-link" href="#">Подробнее</a>
-                        </div>
-                    </li>
-                    <li class="events__card swiper-slide">
-                        <div class="events__card-top events__card-top-3"></div>
-                        <div class="events__card-bottom flex">
-                            <div class="events__card-content">
-                                <div class="events__card-info">
-                                    <span>Еврейский музей</span>
-                                    <p class="events__card-date" >с&nbsp;31&nbsp;марта&nbsp;по&nbsp;21&nbsp;апреля</p>
+                        </li>
+                        <li class="events__card swiper-slide">
+                            <div class="events__card-top events__card-top-3"></div>
+                            <div class="events__card-bottom flex">
+                                <div class="events__card-content">
+                                    <div class="events__card-info">
+                                        <span>Еврейский музей</span>
+                                        <p class="events__card-date" >с&nbsp;31&nbsp;марта&nbsp;по&nbsp;21&nbsp;апреля</p>
+                                    </div>
+                                    <h3 class="events__card-title">Выставка &laquo;Формация 2020&raquo;</h3>
+                                    <p class="events__card-descr">
+                                        Идейные соображения высшего порядка, а&nbsp;также современная методология разработки играет важную роль в&nbsp;формировании глубокомысленных рассуждений.
+                                    </p>
                                 </div>
-                                <h3 class="events__card-title">Выставка &laquo;Формация 2020&raquo;</h3>
-                                <p class="events__card-descr">
-                                    Идейные соображения высшего порядка, а&nbsp;также современная методология разработки играет важную роль в&nbsp;формировании глубокомысленных рассуждений.
-                                </p>
+                                <a class="events__card-link" href="#">Подробнее</a>
                             </div>
-                            <a class="events__card-link" href="#">Подробнее</a>
-                        </div>
-                    </li>
-                    <li class="events__card swiper-slide">
-                        <div class="events__card-top events__card-top-4"></div>
-                        <div class="events__card-bottom flex">
-                            <div class="events__card-content">
-                                <div class="events__card-info">
-                                    <span>ММАМ</span>
-                                    <p class="events__card-date" >с&nbsp;8&nbsp;апреля&nbsp;по&nbsp;20&nbsp;мая</p>
+                        </li>
+                        <li class="events__card swiper-slide">
+                            <div class="events__card-top events__card-top-4"></div>
+                            <div class="events__card-bottom flex">
+                                <div class="events__card-content">
+                                    <div class="events__card-info">
+                                        <span>ММАМ</span>
+                                        <p class="events__card-date" >с&nbsp;8&nbsp;апреля&nbsp;по&nbsp;20&nbsp;мая</p>
+                                    </div>
+                                    <h3 class="events__card-title">Джон Винзор. Фотографии из&nbsp;серии &laquo;Метафора серебра&raquo;
+                                    </h3>
+                                    <p class="events__card-descr">
+                                        Один из ведущих флорентийских художников Кватроченто, основатель художественной династии, которую продолжили его брат&nbsp;Давид и сын Ридольфо.
+                                    </p>
                                 </div>
-                                <h3 class="events__card-title">Джон Винзор. Фотографии из&nbsp;серии &laquo;Метафора серебра&raquo;
-                                </h3>
-                                <p class="events__card-descr">
-                                    Один из ведущих флорентийских художников Кватроченто, основатель художественной династии, которую продолжили его брат&nbsp;Давид и сын Ридольфо.
-                                </p>
+                                <a class="events__card-link" href="#">Подробнее</a>
                             </div>
-                            <a class="events__card-link" href="#">Подробнее</a>
-                        </div>
-                    </li>
-                    <li class="events__card swiper-slide">
-                        <div class="events__card-top events__card-top-5"></div>
-                        <div class="events__card-bottom flex">
-                            <div class="events__card-content">
-                                <div class="events__card-info">
-                                    <span>Третьяковка&nbsp;на&nbsp;Крымском&nbsp;валу</span>
-                                    <p class="events__card-date" >с&nbsp;30&nbsp;марта&nbsp;по&nbsp;30&nbsp;апреля</p>
+                        </li>
+                        <li class="events__card swiper-slide">
+                            <div class="events__card-top events__card-top-5"></div>
+                            <div class="events__card-bottom flex">
+                                <div class="events__card-content">
+                                    <div class="events__card-info">
+                                        <span>Третьяковка&nbsp;на&nbsp;Крымском&nbsp;валу</span>
+                                        <p class="events__card-date" >с&nbsp;30&nbsp;марта&nbsp;по&nbsp;30&nbsp;апреля</p>
+                                    </div>
+                                    <h3 class="events__card-title">XXIV Международная биеннале молодого искусства</h3>
+                                    <p class="events__card-descr">
+                                        Внезапно, реплицированные с&nbsp;зарубежных источников, современные исследования.
+                                    </p>
                                 </div>
-                                <h3 class="events__card-title">XXIV Международная биеннале молодого искусства</h3>
-                                <p class="events__card-descr">
-                                    Внезапно, реплицированные с&nbsp;зарубежных источников, современные исследования.
-                                </p>
+                                <a class="events__card-link" href="#">Подробнее</a>
                             </div>
-                            <a class="events__card-link" href="#">Подробнее</a>
-                        </div>
-                    </li>
-                </ul>
-              <div class="swiper-pagination events__swiper-pagination"></div>
-              <button class="nav-btn events-btn events-btn-next events-slider-nav-btn events-slider-nav-btn-next btn-animate" aria-label="К следующему слайду"></button>
+                        </li>
+                    </ul>
+                  <div class="swiper-pagination events__swiper-pagination"></div>
+                  <button class="nav-btn events-btn events-btn-next events-slider-nav-btn events-slider-nav-btn-next btn-animate" aria-label="К следующему слайду"></button>
+              </div>
             </div>
+
         </div>
     </section>
 
@@ -920,10 +923,10 @@
               <a href="#" class="swiper-slide projects__swiper-link">
                   <img src="img/project-3-1920px.png" alt="Partner" class="projects__swiper-img">
               </a>
-              <a href="#" class="swiper-slide projects__swiper-link">
+              <a href="#" class="swiper-slide projects__swiper-link projects__swiper-link-big">
                   <img src="img/project-4-1920px.png" alt="Partner" class="projects__swiper-img">
               </a>
-              <a href="#" class="swiper-slide projects__swiper-link">
+              <a href="#" class="swiper-slide projects__swiper-link projects__swiper-link-big">
                   <img src="img/project-5-1920px.png" alt="Partner" class="projects__swiper-img">
               </a>
               <a href="#" class="swiper-slide projects__swiper-link">
@@ -932,7 +935,7 @@
               <a href="#" class="swiper-slide projects__swiper-link">
                   <img src="img/project-7-1920px.png" alt="Partner" class="projects__swiper-img">
               </a>
-              <a href="#" class="swiper-slide projects__swiper-link">
+              <a href="#" class="swiper-slide projects__swiper-link projects__swiper-link-big">
                   <img src="img/project-8-1920px.png" alt="Partner" class="projects__swiper-img">
               </a>
               <a href="#" class="swiper-slide projects__swiper-link">
@@ -987,9 +990,7 @@
               </ul>
           </div>
       </div>
-      <div class="container map__container">
-        <div id="map" class="contacts__map"></div>
-      </div>
+      <div id="map" class="contacts__map"></div>
 
 <!--      <div class="container">-->
 <!--        <form class="contacts__request-form flex">-->
@@ -1012,7 +1013,7 @@
   <footer class="footer">
     <div class="footer__container">
         <div class="footer__wrap flex">
-            <a href="" class="footer__logo">
+            <a class="footer__logo">
                 <img src="img/logo.svg" alt="logo">
             </a>
             <ul class="footer__list list-reset flex">
