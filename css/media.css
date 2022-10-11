@@ -477,7 +477,7 @@
     flex-direction: column;
   }
   .gallery__slide::before {
-    padding-top: calc(85% - 6px);
+    padding-top: calc(100% + 30px);
   }
   .modal__item-painter {
     width: 668px;
@@ -654,7 +654,7 @@
 
 @media (max-width: 687px) {
   .container {
-    padding: 50px 15px 0;
+    padding: 50px 25px 0;
   }
   .section-descr {
     font-size: 14px;

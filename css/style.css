@@ -1848,7 +1848,7 @@ body {
 }
 
 .projects__swiper-img {
-  max-width: 125px;
+  max-width: 155px;
   max-height: 85px;
   height: auto;
   filter: grayscale(1) opacity(0.4);
