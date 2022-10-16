@@ -1319,7 +1319,7 @@ body {
 }
 
 .catalog__content-right {
-  width: 50%;
+  flex-basis: 50%;
 }
 
 .catalog__item:first-child .catalog__item-top-title {
@@ -1346,59 +1346,51 @@ body {
   border-color: var(--color7);
 }
 
-.catalog__item:first-child .catalog__item-top-title:active,
-.catalog__item-top-title:active,
-.catalog__item:first-child .catalog__item-top-title.ui-accordion-header-active,
-.catalog__item-top-title.ui-accordion-header-active {
-  position: relative;
-  color: var(--color8);
-  border-top: var(--border) var(--color8);
-  border-bottom: var(--border) var(--color8);
-}
-
 .catalog__item-top-text {
   position: relative;
 }
 
 .catalog__item-top-text-wrap {
   position: relative;
-  z-index: 1;
+  /*z-index: 1;*/
 }
 
-.catalog__item-top-text::before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: calc(100% + 8px);
-  height: 100%;
-  transform: translate(-50%, -50%) scaleX(0);
-  background-color: var(--color7);
-  transition: transform .3s ease-in-out;
-}
+/*.catalog__item-top-text::before {*/
+/*  content: "";*/
+/*  position: absolute;*/
+/*  top: 50%;*/
+/*  left: 50%;*/
+/*  width: calc(100% + 8px);*/
+/*  height: 100%;*/
+/*  transform: translate(-50%, -50%) scaleX(0);*/
+/*  background-color: var(--color7);*/
+/*  transition: transform 0.3s ease-in-out;*/
+/*}*/
 
-.catalog__item-top-title:focus .catalog__item-top-text::before {
-  transform: translate(-50%, -50%) scaleX(1);
-}
+/*.catalog__item-top-title:focus .catalog__item-top-text::before {*/
+/*  transform: translate(-50%, -50%) scaleX(1);*/
+/*}*/
 
 .catalog__item-top-icon {
   position: absolute;
-  top: 20%;
-  right: -5px;
+  top: 25%;
+  right: -10px;
   width: 50px;
   height: 50px;
-  transition: background-color.3s, .6s ease-in-out, transform .3s, .6s ease-in-out;
+  transform: rotate(-180deg);
+  transition: background-color 0.3s, 0.6s ease, transform 0.3s, 0.6s ease;
 }
 
 .catalog__item-top-icon-round {
-  transition: fill 0.3s ease-in-out, stroke .3s ease-in-out;
+  transition: fill 0.3s ease-in-out, stroke 0.3s ease-in-out;
 }
 
 .catalog__item-top-title:hover {
   color: var(--color7);
 }
-.catalog__item-top-title:focus {
+.catalog__item-top-title:focus .catalog__item-top-text {
   color: var(--color14);
+  background-color: var(--color7);
   outline: none;
 }
 
@@ -1415,28 +1407,40 @@ body {
   background-color: var(--color14);
 }
 
-.catalog__item-top-title.ui-accordion-header-active > .catalog__item-top-icon {
+.catalog__item-top-title.ui-accordion-header-active .catalog__item-top-icon {
   transform: translateY(-50%) rotate(0);
 }
 
-.ui-accordion-header-active .catalog__item-top-icon-round:active {
+.ui-accordion-header-active .catalog__item-top-icon-round {
   fill: var(--color5);
   stroke: var(--color7);
-  stroke-width: 2;
+}
+
+.ui-accordion-header-active.catalog__item:first-child   {
+  border-color: var(--color8);
+}
+
+.catalog__item:first-child .catalog__item-top-title:active,
+.catalog__item-top-title:active,
+.ui-accordion-header-active .catalog__item:first-child .catalog__item-top-title,
+.ui-accordion-header-active .catalog__item-top-title {
+  border-color: var(--color8);
+  color: var(--color8);
 }
 
 .ui-accordion-header-active .catalog__item-top-icon {
-  transform: rotate(-180deg);
+  transform: rotate(0);
 }
 
 .catalog__bottom-list {
   column-count: 3;
-  padding-bottom: 55px;
-  padding-top: 25px;
+  padding-bottom: 35px;
+  padding-top: 0;
 }
 
 .catalog__bottom-list-wrap {
   border-bottom: var(--border) transparent;
+  padding: 25px 0;
 }
 
 .catalog__bottom-list-wrap.ui-accordion-content-active {
@@ -1681,42 +1685,63 @@ body {
 }
 
 .events__card-link {
-  display: inline;
-  width: 92px;
-  border-bottom: var(--border) var(--color7);
+  position: relative;
+  z-index: 10;
+  margin-top: auto;
   color: var(--color7);
   transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
 }
 
-.events__card-link::before {
+.events__card-link::before{
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -6px;
+  z-index: -1;
+  width: 25%;
+  height: calc(100% + 10px);
+  background-color: var(--color7);
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.events__card-link::after {
   content: '';
   position: absolute;
   left: 0;
-  bottom: 55px;
-  background-color: var(--color14);
+  bottom: 0;
+  background-color: var(--color7);
   height: 1px;
-  width: 100%;
-  transform: scaleX(0);
-  transform-origin: left;
-  transition: transform 0.3s ease-in-out;
+  width: 25%;
+  transition: background-color 0.3s ease-in-out;
 }
 
-.events__card-link:focus-visible {
-  color: var(--color14);
-  background-color: var(--color7);
-  padding: 5px;
+.events__card-link:focus-visible:not(:hover):not(:active)::before{
+  opacity: 1;
 }
+
+.events__card-link:focus-visible:not(:hover):not(:active) {
+  color: var(--color14);
+}
+
+.events__card-link:focus-visible:not(:hover):not(:active)::after {
+  background-color: var(--color14);
+}
+
 .events__card-link:hover {
   color: var(--color8);
-  border-bottom-color: var(--color8);
-}
-.events__card-link:active {
-  color: var(--color2);
-  border-bottom-color: var(--color2);
 }
 
-.events__card-link:focus-visible:before {
-  transform: scaleX(1);
+.events__card-link:hover::after {
+  background-color: var(--color8);
+}
+
+.events__card-link:active {
+  color: var(--color2);
+}
+
+.events__card-link:active::after {
+  background-color: var(--color2);
 }
 
 /* projects */
@@ -1800,15 +1825,28 @@ body {
 }
 
 .projects__slider {
-  overflow: hidden;
+  position: relative;
+  z-index: 1;
   width: calc(1450 / 1600 * 100%);
+  height: 150px;
+  padding: 0;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
+  height: 150px;
+}
+
+.projects-slider-wrapper {
+  display: flex;
+  width: 100%;
+  height: 100%;
 }
 
 .projects__swiper-link {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 150px;
+
   padding: 32px 60px;
   border: var(--border) var(--color12);
   box-sizing: border-box;
@@ -1848,8 +1886,9 @@ body {
 }
 
 .projects__swiper-img {
-  max-width: 155px;
+  /*max-width: 155px;*/
   max-height: 85px;
+  width: auto;
   height: auto;
   filter: grayscale(1) opacity(0.4);
   transition-property: filter, opacity;

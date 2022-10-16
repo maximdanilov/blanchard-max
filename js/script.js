@@ -143,6 +143,12 @@ document.addEventListener("DOMContentLoaded", () => {
   })
 })
 
+$(document).ready(function () {
+    $('.gallery__slide').click(function (e) {
+        e.preventDefault();
+    })
+})
+
 const btn = document.querySelectorAll('.gallery__slide');
 const modal = document.querySelector('.modal__list');
 const notes = document.querySelectorAll('.modal__item');
@@ -224,12 +230,6 @@ document.querySelectorAll('.catalog__bottom-btn').forEach(function (tabsBtn) {
       document.querySelector(`[data-target="${path}"]`).classList.add('catalog__content-info--active');
   });
 });
-
-$(document).ready(function () {
-    $('.gallery__slide').click(function (e) {
-        e.preventDefault();
-    })
-})
 
 $(document).ready(function(){
 
