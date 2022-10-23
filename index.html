@@ -955,7 +955,7 @@
             <h3 class="contacts__address-color">Шоурум №4</h3>
               <span>Леонтьевский переулок, дом 5/1</span>
           </div>
-          <form class="contacts__form flex" action="https://jsonplaceholder.typicode.com/posts" method="post">
+          <form class="contacts__form flex" action="https://jsonplaceholder.typicode.com/posts" method="post" enctype="multipart/form-data">
             <div class="contacts__input-wrap flex">
               <input class="contacts__input" type="text" name="Name" id="name" placeholder="Имя*"
                   data-validate-field="name">
@@ -964,8 +964,11 @@
                 <input class="contacts__input" type="tel" id="tel" placeholder="Телефон*"
                     data-validate-field="tel" data-validate-rules="phone">
             </div>
+<!--            <div class="contacts__input-wrap contacts__input-wrap&#45;&#45;mr">-->
+<!--              <input class="contacts__input" type="file" name="file[]" multiple id="myfile">-->
+<!--            </div>-->
             <button class="contacts__btn btn-reset" type="submit"  aria-label="Заказать обратный звонок">
-                <span> Заказать <span class="contacts__btn-addition">обратный звонок</span></span>
+                <span>Заказать <span class="contacts__btn-addition">обратный звонок</span></span>
             </button>
           </form>
           <div class="contacts__connection">

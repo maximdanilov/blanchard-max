@@ -1388,14 +1388,14 @@ body {
 .catalog__item-top-title:hover {
   color: var(--color7);
 }
-.catalog__item-top-title:focus .catalog__item-top-text {
+.catalog__item-top:focus .catalog__item-top-text {
   color: var(--color14);
   background-color: var(--color7);
   outline: none;
 }
 
-.catalog__item-top-title:hover .catalog__item-top-icon-round,
-.catalog__item-top-title:focus .catalog__item-top-icon-round {
+.catalog__item-top:focus .catalog__item-top-icon-round,
+.catalog__item-top-title:hover .catalog__item-top-icon-round {
   fill: var(--color5);
   stroke: var(--color5);
 }
@@ -1416,7 +1416,8 @@ body {
   stroke: var(--color7);
 }
 
-.ui-accordion-header-active.catalog__item:first-child   {
+.catalog__item-top:active .catalog__item-top-title,
+.catalog__item-top.ui-accordion-header-active .catalog__item-top-title {
   border-color: var(--color8);
 }
 
@@ -1559,12 +1560,11 @@ body {
   display: none;
 }
 
-.events-btn,
-.events-btn {
+.events-btn-prev,
+.events-btn-next {
   width: 50px;
   height: 50px;
-  background-color: var(--color12);
-  transition: border 0.3s ease-in-out, backgroud-color 0.3s ease-in-out;
+  background-color: var(--color13);
 }
 .btn-animate:focus, 
 .btn-animate:focus {
@@ -1606,8 +1606,7 @@ body {
 .events-slider-nav-btn {
   z-index: 12;
   position: absolute;
-  top: 60%;
-  transition: opacity 0.3s ease-in-out;
+  top: 40%;
 }
 
 .events-slider-nav-btn-prev {

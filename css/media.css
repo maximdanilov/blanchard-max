@@ -350,7 +350,7 @@
   }
   /*hero*/
   .hero__container {
-    padding: 0 55px;
+    padding: 0 50px;
   }
   .hero__content {
     width: 75%;
@@ -400,7 +400,6 @@
   }
   .gallery__container {
     padding-bottom: 110px;
-    padding-right: 50px;
   }
   .gallery__text {
     margin-bottom: 105px;
@@ -652,9 +651,6 @@
 }
 
 @media (max-width: 687px) {
-  .container {
-    padding: 50px 15px 0;
-  }
   .section-descr {
     font-size: 14px;
     line-height: 28px;
@@ -940,7 +936,7 @@
   }
   .header__nav {
     top: 0;
-    padding: 80px 0 30px 50px;
+    padding: 80px 15px 30px 15px;
     font-size: 16px;
     line-height: 32px;
     /*left: -14px;*/
@@ -1048,8 +1044,11 @@
     width: 18px;
     height: 18px;
   }
+  .container {
+    padding: 50px 15px 0;
+  }
   .header__top-container {
-    padding: 0 30px;
+    padding: 0;
   }
   .header__form-mobile-close svg {
     width: 15px;

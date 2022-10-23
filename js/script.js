@@ -404,50 +404,25 @@ new JustValidate('.contacts__form', {
         tel: {
             required: "Укажите ваш телефон",
             function: "Недопустимый формат",
-        },
+        }
+    },
+}).onSuccess((event) => {
+    console.log('Валидация отправлена');
+    console.log(event);
+    let formData = new FormData(event.target);
+
+    let xhr = new XMLHttpRequest();
+
+    xhr.onreadystatechange = function () {
+        if (xhr.readyState === 4) {
+            if (xhr.status === 200) {
+                console.log('Отправено');
+            }
+        }
     }
+
+    xhr.open('Post', 'mail.php', true);
+    xhr.send(formData);
+
+    event.target.reset();
 });
-// new JustValidate('.contacts__request-form', {
-//     rules: {
-//         name: {
-//             required: true,
-//             minLength: 2,
-//             maxLength: 30
-//         },
-//         mail: {
-//             required: true,
-//             email: true
-//         }
-//     },
-//     messages: {
-//         name: {
-//             required: "Как вас зовут?",
-//             minLength: "Недопустимый формат",
-//         },
-//         mail: {
-//             required: "Укажите ваш email",
-//             function: "Недопустимый формат",
-//         }
-//     }
-// });
-
-$(document).ready(function() {
-
-	//E-mail Ajax Send
-	$(".contacts__form").submit(function() { //Change
-		var th = $(this);
-		$.ajax({
-			type: "POST",
-			url: "mail.php", //Change
-			data: th.serialize()
-		}).done(function() {
-			alert("Заявка успешна отправлена");
-			setTimeout(function() {
-				// Done Functions
-				th.trigger("reset");
-			}, 1000);
-		});
-		return false;
-	});
-});
-
